@@ -49,7 +49,7 @@ a:focus {
     font-size: 22px;
     right: 15px;
     bottom: 15px;
-    transition: background 0.5s;
+    transition: 0.5s;
     z-index: 9;
 }
 
@@ -176,21 +176,17 @@ a:focus {
 
 .navbar .navbar-brand {
     margin: 0;
-    color: #ffffff;
-    font-size: 45px;
-    font-family: 'Open Sans', sans-serif;
-    line-height: 0px;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 50px;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 2px;
     transition: .5s;
-    
-}
-
-.navbar .navbar-brand span {
-    color: #F7CAC9;
-    text-transform: capitalize;
-    transition: .5s;
+    padding-left: 1%;
+    background: -webkit-linear-gradient(#343148 45%, #f7cac9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navbar.nav-sticky .navbar-brand span {
@@ -206,7 +202,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    padding: 10px 10px 8px 10px;
+    padding: 5px 10px 8px 10px;
     color: #ffffff;
 }
 
@@ -272,46 +268,60 @@ a:focus {
 .hero {
     position: relative;
     width: 100%;
-    margin-bottom: 45px;
-    padding: 90px 0;
+    margin-bottom: 0px;
+    padding-top: 60px;
+    padding-left: 0px;
     background: #F7CAC9;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .hero .container-fluid {
-    padding: 0;
+    padding-top: 55px;
+    padding-right: 45px;
+    padding-bottom: 5px;
+    padding-left: 45px;
 }
 
 .hero .hero-image {
     position: relative;
     text-align: right;
+    padding: 45px
 }
 
 .hero .hero-image img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .hero .hero-text {
     position: relative;
-    padding-left: 75px;
+    padding-left: 40px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    font-style: justify;
 }
 
-.hero .hero-text h1 {
+.hero .hero-text .hero-intro {
     color: #343148;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.hero .hero-text p {
+.hero .hero-text .hero-brand {
     color: #343148;
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 25px;
+    font-style: justify
+}
+
+.hero .hero-text .hero-brand span {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #383741;
+    font-size: 23px;
+    font-weight: 700;
 }
 
 .hero .hero-btn .btn {
@@ -325,11 +335,9 @@ a:focus {
     transition: .3s;
 }
 
-.hero .hero-brand span {
-    color: #000000
-    ;
-    text-transform: capitalize;
-    font-size: 35px
+.hero .hero-brand {
+    color: #2e2c41;
+    font-size: 25px
 }
 
 
@@ -504,7 +512,7 @@ a:focus {
 .about {
     position: relative;
     width: 100%;
-    padding: 45px 0;
+    padding-top: 150px;
 }
 
 .about .section-header {
@@ -1201,7 +1209,7 @@ a:focus {
 .blog {
     position: relative;
     width: 100%;
-    padding: 45px 0;
+    padding: 90px 0;
 }
 
 .blog .blog-carousel {
@@ -1900,13 +1908,12 @@ a:focus {
 /*******************************/
 .footer {
     position: relative;
-    margin-top: 30px;
+    margin-top: 5px;
     background: #000000;
 }
 
 .footer .container-fluid {
-    padding: 90px 0 0 0;
-    background: linear-gradient(rgba(52, 49, 72, .9), rgba(52, 49, 72, .9)), url(../img/footer-bg.png);
+    background: linear-gradient(#f7cac9, #2e2c41);       
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -1916,22 +1923,29 @@ a:focus {
     position: relative;
     width: 100%;
     text-align: center;
+    
 }
 
 .footer .footer-info .footer-logo {
     display: inline-block;
-    color: #F7CAC9;
-    font-size: 60px;
-    line-height: 60px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #2e2c41;
+    font-size: 30px;
+    line-height: 30px;
     font-weight: 700;
-    text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 45px;
+    margin-bottom: 5px;
 }
 
-.footer .footer-info .footer-logo span {
+.footer .footer-credit .footer-brand {
+    font-family: Georgia, 'Times New Roman', Times, serif;
     color: #ffffff;
-    text-transform: lowercase;
+    font-size: 19px;
+    line-height: 60px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 45px;
+
 }
 
 .footer .footer-info h3 {
@@ -1985,13 +1999,13 @@ a:focus {
 }
 
 .footer .copyright {
-    margin-top: 60px;
+    margin-top: 10px;
     padding: 0 30px;
 }
 
 .footer .copyright .row {
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     border-top: 1px solid rgba(256, 256, 256, .1);
 }
 
@@ -2002,12 +2016,14 @@ a:focus {
 
 .footer .copyright .col-md-6:last-child p {
     text-align: right;
+    padding-top: 15px;
 }
 
 .footer .copyright p a {
     color: #ffffff;
     font-weight: 600;
 }
+
 
 .footer .copyright p a:hover {
     color: #F7CAC9;
