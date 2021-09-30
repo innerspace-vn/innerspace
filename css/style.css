@@ -2,7 +2,7 @@
 /********* General CSS *********/
 /*******************************/
 body {
-    color: #797979;
+    color: #48455a;
     background: #ffffff;
     font-family: 'Open Sans', sans-serif;
 }
@@ -17,7 +17,7 @@ h6 {
 }
 
 a {
-    color: #454545;
+    color: #002fff;
     transition: .3s;
 }
 
@@ -175,18 +175,20 @@ a:focus {
 }
 
 .navbar .navbar-brand {
-    margin: 0;
     font-size: 40px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    line-height: 50px;
+    line-height: 40px;
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 2px;
     transition: .5s;
     padding-left: 1%;
-    background: -webkit-linear-gradient(#343148 45%, #f7cac9);
+    color: #ffffff;
+    background-image: url(https://previews.123rf.com/images/miloplz/miloplz1702/miloplz170200019/73186090-pink-sky-background-with-clouds.jpg);
+    background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
 }
 
 .navbar.nav-sticky .navbar-brand span {
@@ -202,7 +204,7 @@ a:focus {
 .navbar-dark .navbar-nav .nav-link:focus,
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link.active {
-    padding: 5px 10px 8px 10px;
+    padding: 0px 10px 2px 10px;
     color: #ffffff;
 }
 
@@ -271,8 +273,8 @@ a:focus {
     margin-bottom: 0px;
     padding-top: 60px;
     padding-left: 0px;
-    background: #F7CAC9;
-    overflow: visible;
+    background-image: linear-gradient(to bottom, #ffa3a1, #feaaa9, #fdb2b0, #fcb9b8, #fac0bf, #fac7cb, #f9cfd6, #f8d7df, #f7e1ec, #f7ecf5, #f9f6fc, #ffffff);
+    overflow: hidden;
 }
 
 .hero .container-fluid {
@@ -305,27 +307,26 @@ a:focus {
 
 .hero .hero-text .hero-intro {
     color: #343148;
-    font-size: 30px;
+    font-size: 31px;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
 .hero .hero-text .hero-brand {
     color: #343148;
-    font-size: 20px;
-    margin-bottom: 25px;
+    font-size: 18px;
     font-style: justify
 }
 
 .hero .hero-text .hero-brand span {
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #383741;
-    font-size: 23px;
+    font-size: 22px;
     font-weight: 700;
 }
 
 .hero .hero-btn .btn {
-    padding: 12px 20px;
+    padding: 6px 20px;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -410,16 +411,20 @@ a:focus {
 /*******************************/
 .page-header {
     position: relative;
-    margin-bottom: 45px;
-    padding: 150px 0 90px 0;
+    margin-bottom: 0px;
+    padding: 150px 0 30px 0px;
     text-align: center;
-    background: #F7CAC9;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-width: 100%;
+    background-image: linear-gradient(to bottom, #ffa3a1, #feaaa9, #fdb2b0, #fcb9b8, #fac0bf, #fac7cb, #f9cfd6, #f8d7df, #f7e1ec, #f7ecf5, #f9f6fc, #ffffff);
 }
 
 .page-header h2 {
     position: relative;
     color: #343148;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 700;
 }
 
@@ -511,29 +516,34 @@ a:focus {
 /*******************************/
 .about {
     position: relative;
-    width: 100%;
-    padding-top: 150px;
+    max-width: 100%;
+    padding-top: 10px;
+    display: inline-block;
+    padding-left: 65px;
 }
 
-.about .section-header {
-    margin-bottom: 30px;
-    margin-left: 0;
+.about .section-header h4 {
+    text-align: center;
+    font-size: 23px;
 }
 
-.about .about-img {
-    position: relative;
-    height: 100%;
+.about .brand {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #343148;
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 550;
+    letter-spacing: 2px;
 }
 
-.about .about-img img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.about .about-img .img {
+    float: left;
 }
 
 .about .about-text p {
     font-size: 16px;
+    text-align: justify;
+    display: inline-block;
 }
 
 .about .about-text a.btn {
@@ -547,19 +557,80 @@ a:focus {
     background: #343148;
     border-radius: 0;
     transition: .3s;
+    display: inline-block;
 }
 
 .about .about-text a.btn:hover {
     color: #343148;
     background: #F7CAC9;
+    display: inline-block;
 }
 
 @media (max-width: 767.98px) {
     .about .about-img {
         margin-bottom: 30px;
         height: auto;
+        display: inline-block;
     }
 }
+
+/*******************************/
+/***Random Picture Generator****/
+/*******************************/
+.randeatclean {
+    position: relative;
+    text-align: center;
+    display: block;
+}
+
+.randeatclean .txt {
+    color: #343148;
+    text-align: center;
+    font-size: 13.5px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0px;
+    letter-spacing: 2.2px;
+}
+
+.randeatclean .randbtn {
+    display: inline-block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px
+}
+
+#display_image > img {
+    display: block;
+    margin: 0 auto;
+}
+
+.randeatclean .randbtn .btn {
+    display: inline-block;
+    padding: 6px 20px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #F7CAC9;
+    background: #343148;
+    border-radius: 0;
+    transition: .3s;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.randeatclean .randbtn .btn:hover {
+    display: inline-block;
+    color: #343148;
+    background: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
 
 /*******************************/
@@ -1209,7 +1280,6 @@ a:focus {
 .blog {
     position: relative;
     width: 100%;
-    padding: 90px 0;
 }
 
 .blog .blog-carousel {
@@ -1221,7 +1291,7 @@ a:focus {
 
 .blog .blog-item {
     position: relative;
-    margin: 0 15px;
+    margin: 0px 15px;
 }
 
 .blog .blog-page .blog-item {
@@ -1229,12 +1299,14 @@ a:focus {
 }
 
 .blog .blog-img {
-    position: relative;
-    width: 100%;
+    position: center;
+
+    text-align: center
 }
 
 .blog .blog-img img {
-    width: 100%;
+
+    text-align: center
 }
 
 .blog .blog-text {
@@ -1243,22 +1315,25 @@ a:focus {
     border-right: 1px solid rgba(0, 0, 0, .07);
     border-bottom: 1px solid rgba(0, 0, 0, .07);
     border-left: 1px solid rgba(0, 0, 0, .07);
+    text-align: justify;
 }
 
 .blog .blog-text h2 {
     font-size: 22px;
     font-weight: 600;
+    text-align: justify;
 }
 
 .blog .blog-text p {
     margin-bottom: 10px;
+    text-align: justify;
 }
 
 .blog .blog-item a.btn {
-    padding: 0;
-    font-size: 14px;
+    padding-bottom: 10px;
+    font-size: 25px;
     font-weight: 700;
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: #343148;
     transition: .3s;
 }
@@ -1908,15 +1983,18 @@ a:focus {
 /*******************************/
 .footer {
     position: relative;
-    margin-top: 5px;
-    background: #000000;
+    margin-top: 1px;
+    padding-top: 10px;
+    bottom: 0;
+    clear: both;
 }
 
 .footer .container-fluid {
-    background: linear-gradient(#f7cac9, #2e2c41);       
+    background: linear-gradient(to bottom, #ffffff 0%, #FFA3A1 80%);   
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    max-width: 100%;
 }
 
 .footer .footer-info {
@@ -1939,13 +2017,12 @@ a:focus {
 
 .footer .footer-credit .footer-brand {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #ffffff;
+    color: #343148;
     font-size: 19px;
     line-height: 60px;
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 45px;
-
 }
 
 .footer .footer-info h3 {
@@ -2011,7 +2088,7 @@ a:focus {
 
 .footer .copyright p {
     margin: 0;
-    color: #ffffff;
+    color: #343148;
 }
 
 .footer .copyright .col-md-6:last-child p {
@@ -2026,7 +2103,7 @@ a:focus {
 
 
 .footer .copyright p a:hover {
-    color: #F7CAC9;
+    color: #343148;
 }
 
 @media (max-width: 767.98px) {

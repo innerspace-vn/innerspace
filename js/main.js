@@ -124,3 +124,119 @@
     
 })(jQuery);
 
+
+//EAT CLEAN
+function displayRandomImages()   
+    {  
+       //array of images with image location, height, and width  
+       var imageArray = [  
+       {   
+         //address URL of the image  
+         src: "img/eatclean/1.png",  
+         //size for the image to be display on webpage  
+         width: "1122.5",  
+         height: "793.5"  
+        
+       },   
+       {  
+         src: "img/eatclean/2.png",  
+         width: "1122.5",  
+         height: "793.5"  
+       },   
+       {  
+         src: "img/eatclean/3.png",  
+         width: "1122.5",  
+         height: "793.5"  
+       },  
+        {  
+         src: "img/eatclean/4.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/5.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/6.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/7.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/8.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/9.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/10.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/11.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/12.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/13.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/14.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+        {  
+         src: "img/eatclean/15.png",  
+         width: "1122.5",  
+         height: "793.5"  
+        },
+    ];  
+          
+        //find the length of the array of images  
+        var arrayLength = imageArray.length;  
+        var newArray = [];  
+        for (var i = 0; i < arrayLength; i++) {  
+            newArray[i] = new Image();  
+            newArray[i].src = imageArray[i].src;  
+            newArray[i].width = imageArray[i].width;  
+            newArray[i].height = imageArray[i].height;  
+        }  
+         
+      // create random image number  
+      function getRandomNum(min, max)   
+      {  
+          // generate and return a random number for the image to be displayed   
+          imgNo = Math.floor(Math.random() * (max - min + 1)) + min;  
+          return newArray[imgNo];  
+      }    
+      
+      // 0 is first image and (preBuffer.length - 1) is last image of the array  
+      var newImage = getRandomNum(0, newArray.length - 1);  
+       
+      // remove the previous images  
+      var images = document.getElementsByTagName('img');  
+      var l = images.length;  
+      for (var p = 0; p < l; p++) {  
+         images[0].parentNode.removeChild(images[0]);  
+      }  
+      // display the new random image    
+      document.body.appendChild(newImage);  
+    }  

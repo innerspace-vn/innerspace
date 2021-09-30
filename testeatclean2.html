@@ -2,7 +2,7 @@
 <html lang="vi">
     <head>
         <meta charset="utf-8">
-        <title>Inner Space</title>
+        <title>Gợi ý Thực đơn Eat Clean | Inner Space</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="Free Website Template" name="keywords">
         <meta content="Free Website Template" name="description">
@@ -23,8 +23,9 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <script src="js/main.js"></script>
     </head>
-
+    
     <body>
 
         <!-- Nav Bar Start -->
@@ -40,8 +41,8 @@
                     <div class="navbar-nav ml-auto">
                         <a href="index.html" class="nav-item nav-link">Trang chủ</a>
                         <a href="about.html" class="nav-item nav-link">Giới thiệu</a>
-                        <a href="morning.html" class="nav-item nav-link">Hoạt động Bình minh</a>
-                        <a href="afternoon.html" class="nav-item nav-link active">Hoạt động Hoàng hôn</a>
+                        <a href="morning.html" class="nav-item nav-link active">Hoạt động Bình minh</a>
+                        <a href="afternoon.html" class="nav-item nav-link">Hoạt động Hoàng hôn</a>
                         <a href="specials.html" class="nav-item nav-link">Sự kiện Đặc biệt</a>
                     </div>
                 </div>
@@ -49,58 +50,28 @@
         </div>
         <!-- Nav Bar End -->
 
+
         <!-- Page Header Start -->
         <div class="page-header">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2>Các hoạt động</h2>
+                        <h2>Gợi ý Thực đơn Eat Clean</h2>
                     </div>
                 </div>
             </div>
         </div>
         <!-- Page Header End -->
 
-        <!-- Blog Start -->
-        <div class="blog">
-            <div class="container">
-                <div class="row blog-page">
-                    <div class="col-lg-12 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                        <div class="blog-item">
-                            <div class="blog-img">
-                                <img src="img/yogacovid.png" alt="Yoga" height="300" width="350">
-                            </div>
-                            <div class="blog-text">
-                                <a class="btn" href="yoga.html">Yoga<i class="fa fa-angle-right"></i></a>
-                                <p>
-                                    Yoga là một phương pháp rèn luyện bắt nguồn từ Ấn Độ, kết hợp giữa Cơ thể, Tinh thần và Tâm hồn. Qua đó, con người có thể tăng cường sức khỏe, phòng bệnh, đồng thời giữ tinh thần thoải mái, kiểm soát cảm xúc tốt hơn và cải thiện cuộc sống theo hướng tích cực.
-                                </p>
-                                <p>
-                                    Trong tình hình dịch bệnh hiện nay, khi chúng ta thường xuyên phải học và làm việc online, mặt đối mặt với chiếc laptop hàng giờ đồng hồ, Inner Space tin rằng Yoga sẽ giúp bạn:
-                                </p>
-                                <p>
-                                    ✅ Có tinh thần thư giãn, thoải mái và cân bằng sau một ngày dài làm việc mệt mỏi
-                                </p>
-                                <p>
-                                    ✅ Giúp xương chắc khỏe, giảm đau lưng.
-                                </p>
-                                <p>
-                                    ✅ Giúp cơ thể săn chắc, dẻo dai, linh hoạt hơn.
-                                </p>
-                                <p>
-                                    ✅ Giúp bạn tăng cường sức đề kháng, ngăn ngừa bệnh tật liên quan đến tim, huyết áp…
-                                </p>
-                                <p>
-                                    Với 4 lợi ích "siu to khổng lồ" kể trên, hãy bắt đầu tập Yoga ngay từ hôm nay để giúp "cột sống" của bạn khỏe mạnh hơn nhé 🎉
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Random Picture Generator Start -->
+        <div class ="randeatclean">  
+            <div id="imageArray" align="center"></div>
+            <div class = "randbtn">
+                <button onclick="displayRandomImages();" class="btn">Úm ba la xì bùa một Thực đơn Eat Clean hiện ra ✨</button>  
             </div>
-        </div>
-        <!-- Blog End -->
-
+            <h6 class="txt">(Hãy nhấn nút để lựa chọn ngẫu nhiên một thực đơn!)</h6>  
+        </div>  
+        <!-- Random Picture Generator End -->
 
         <!-- Footer Start -->
         <div class="footer wow fadeIn" data-wow-delay="0.3s">
@@ -126,4 +97,3 @@
         <!-- Footer End -->
     </body>
 </html>
-
