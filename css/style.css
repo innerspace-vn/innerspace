@@ -470,19 +470,23 @@ a:focus {
 /*******************************/
 .section-header {
     position: relative;
-    max-width: 600px;
+    max-width: 100%;
     margin: 0 auto;
     margin-bottom: 45px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .section-header p {
     display: inline-block;
     margin: 0 30px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
     padding: 0 10px;
     position: relative;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
+    letter-spacing: 1.7px;
     background: #ffffff;
 }
 
@@ -490,9 +494,9 @@ a:focus {
     position: absolute;
     content: "";
     height: 2px;
-    top: 11px;
-    right: -30px;
-    left: -30px;
+    top: 10px;
+    right: -39px;
+    left: -39px;
     background: #F7CAC9;
     z-index: -1;
 }
@@ -578,42 +582,36 @@ a:focus {
 /***Random Picture Generator****/
 /*******************************/
 .randeatclean {
-    position: relative;
+    margin-top: 10px;
     text-align: center;
-    display: block;
+    align-items: center;
+    justify-content: center;
 }
 
 .randeatclean .txt {
     color: #343148;
     text-align: center;
-    font-size: 13.5px;
+    font-size: 2px;
     justify-content: center;
     align-items: center;
     padding-bottom: 0px;
-    letter-spacing: 2.2px;
+    letter-spacing: 0px;
 }
 
 .randeatclean .randbtn {
-    display: inline-block;
+    display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px
 }
 
-#display_image > img {
-    display: block;
-    margin: 0 auto;
-}
 
 .randeatclean .randbtn .btn {
-    display: inline-block;
-    padding: 6px 20px;
-    font-size: 16px;
+    font-size: 16.5px;
     font-weight: 700;
     letter-spacing: 1px;
-    color: #F7CAC9;
-    background: #343148;
+    color: #ff4c49;
+    background: #ffe1e6;
     border-radius: 0;
     transition: .3s;
     text-align: center;
@@ -622,16 +620,87 @@ a:focus {
 }
 
 .randeatclean .randbtn .btn:hover {
-    display: inline-block;
-    color: #343148;
+    color: #ff8a88;
+    background: #fff7f7;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.randeatclean .randtxt h6 {
+    margin-bottom: 50px;
+    position: relative;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 4px;
     background: #ffffff;
+    color: #ff9492;
+    padding-top:10px;
+    padding-bottom:10px;
+    padding-right:5px;
+    margin-left: 10px;
+}
+
+
+
+/*******************************/
+/******* Embed Video CSS *******/
+/*******************************/
+.embed-video {
+    display: block;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
 
+.embed-video .mindfulness .header p {
+    display: inline-block;
+    margin: 0 30px;
+    margin-bottom: 0px;
+    padding: 0 10px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    background: #ffffff;
+    padding-bottom: 10px;
+}
 
+.embed-video .mindfulness .header p::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 10px;
+    right: -140px;
+    left: -140px;
+    background: #F7CAC9;
+    z-index: -1;
+}
+
+.embed-video .yoga .header p {
+    display: inline-block;
+    margin: 0 30px;
+    margin-bottom: 0px;
+    padding: 0 10px;
+    position: relative;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    background: #ffffff;
+    padding-bottom: 10px;
+}
+
+.embed-video .yoga .header p::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    top: 10px;
+    right: -218px;
+    left: -218px;
+    background: #F7CAC9;
+    z-index: -1;
+}
 
 /*******************************/
 /********* Service CSS *********/
@@ -1300,12 +1369,10 @@ a:focus {
 
 .blog .blog-img {
     position: center;
-
     text-align: center
 }
 
 .blog .blog-img img {
-
     text-align: center
 }
 
@@ -1330,6 +1397,7 @@ a:focus {
 }
 
 .blog .blog-item a.btn {
+    text-align: center;
     padding-bottom: 10px;
     font-size: 25px;
     font-weight: 700;
@@ -1339,11 +1407,13 @@ a:focus {
 }
 
 .blog .blog-item a.btn i {
-    margin-left: 5px;
+    margin-left: 10px;
+    text-align: center;
 }
 
 .blog .blog-item a.btn:hover {
     color: #F7CAC9;
+    text-align: center;
 }
 
 .blog .blog-meta {

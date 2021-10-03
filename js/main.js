@@ -136,7 +136,6 @@ function displayRandomImages()
          //size for the image to be display on webpage  
          width: "1122.5",  
          height: "793.5"  
-        
        },   
        {  
          src: "img/eatclean/2.png",  
@@ -238,5 +237,5 @@ function displayRandomImages()
          images[0].parentNode.removeChild(images[0]);  
       }  
       // display the new random image    
-      document.body.appendChild(newImage);  
+      document.body.appendChild(newImage); 
     }  
