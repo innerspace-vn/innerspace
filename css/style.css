@@ -175,7 +175,7 @@ a:focus {
 }
 
 .navbar .navbar-brand {
-    font-size: 40px;
+    font-size: 35px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     line-height: 40px;
     font-weight: 700;
@@ -183,7 +183,7 @@ a:focus {
     letter-spacing: 2px;
     transition: .5s;
     padding-left: 1%;
-    color: #ffffff;
+    padding-bottom: 10px;
     background-image: url(https://previews.123rf.com/images/miloplz/miloplz1702/miloplz170200019/73186090-pink-sky-background-with-clouds.jpg);
     background-repeat: repeat;
     -webkit-background-clip: text;
@@ -238,9 +238,9 @@ a:focus {
     
     .navbar a.nav-link {
         padding: 8px 15px;
-        font-size: 14px;
+        font-size: 14.5px;
         letter-spacing: 1px;
-        text-transform: uppercase;
+        text-transform: capitalize;
     }
 }
 
