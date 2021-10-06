@@ -161,6 +161,15 @@ a:focus {
 /**********************************/
 /*********** Nav Bar CSS **********/
 /**********************************/
+nav select {
+    display: none;
+  }
+
+@media (max-width: 960px) {
+nav ul     { display: none; }
+nav select { display: inline-block; }
+}
+
 .navbar {
     position: relative;
     transition: .5s;
