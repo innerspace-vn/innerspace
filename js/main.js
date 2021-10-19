@@ -265,3 +265,9 @@ $("nav a").each(function() {
 $("nav select").change(function() {
     window.location = $(this).find("option:selected").val();
   });
+
+
+  function othername() {
+    var input = document.getElementById("userInput").value;
+    alert(input);
+}
