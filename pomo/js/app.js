@@ -326,7 +326,7 @@ function resetTimer() {
 	}
 	//Display input
 	timeLeftDisplay.innerHTML = secondsToMinutes(timeLeft);
-	document.title = "Mindful Pomo | Inner Space";
+	document.title = "Mindful Pomo | Sereny";
 	progressDisplay();
 }
 

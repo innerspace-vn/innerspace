@@ -2,9 +2,9 @@
 <html lang="vi">
     <head>
         <meta charset="utf-8">
-        <title>Mindful Pomo | Inner Space</title>
+        <title>Mindful Pomo | Sereny</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <meta content="Inner Space" name="keywords">
+        <meta content="Sereny" name="keywords">
         <meta content="The one and only BFF who cares for your health 24/7" name="description">
 
         <!-- Favicon -->
@@ -40,7 +40,7 @@
         <!-- Nav Bar Start -->
         <div class="navbar navbar-expand-lg bg-dark navbar-dark">
             <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Inner Space</a>
+                <a href="index.html" class="navbar-brand">Sereny</a>
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon">
                     </span>
@@ -76,78 +76,116 @@
 
 		<!-- Main Content -->
 		<div class="border-bottom" id="mainPage">
-			<!-- Alert -->
-			<div class="alert alert-danger alert-dismissible fade show" role="alert">
-				<span id="alertMessage"></span>
-				<button type="button" class="close" onclick="dismissAlert()" aria-label="Close">
-					<span aria-hidden="true"><i class="fas fa-times fa-lg mt-1"></i></span>
-				</button>
-			</div>
+			<div id="video-container">
+				<div class="video-overlay"></div>
+				<div class="video-content">
+					<div class="inner">
+						<div class="scroll-icon">
+							<a class="scrollTo" data-scrollTo="portfolio" href="#"><img src="img/scroll-icon.png" alt=""></a>
+						</div>    
+						<video autoplay="" loop="" muted>
+							<source src="img/learnmonth/study-loop.mp4" type="video/mp4" />
+						</video>
 
-			<!-- NAVBAR -->
-			<div class="container mt-3">
-				<div class="row justify-content-end">
-					<div class="col-12 px-0">
-						<ul class="nav nav-pills">
-							<div class="col-lg-4 px-0">
-								<a class="nav-link active pt-2 nav-underline" id="pomodoros" data-toggle="tab" role="tab" aria-selected="false" href="/">Tập Trung</a>
-							</div>
-							<div class="col-lg-4 px-0">
-								<a class="nav-link pt-2 nav-underline" id="shortBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Nghỉ Ngắn</a>
-							</div>
-							<div class="col-lg-4 px-0">
-								<a class="nav-link pt-2 nav-underline" id="longBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Nghỉ Dài</a>
-							</div>
-						</ul>
-					</div>
-					<div class="col-3">
-						<ul class="nav nav-pills justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link px-2 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#toDoModal" href="#"
-									><i class="fas fa-tasks fa-lg"></i
-								></a>
-							</li>
-							<li class="nav-item pl-2 pr-0">
-								<a class="nav-link px-2 mx-1 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#loggingModal" href="#"
-									><i class="fas fa-chart-bar fa-lg"></i
-								></a>
-							</li>
-							<li class="nav-item">
-								<a
-									class="nav-link pl-2 pr-0 ml-2 d-none d-md-block button-pressed-no-shadow"
-									data-toggle="modal"
-									data-target="#settingsModal"
-									href="#"
-									><i class="fas fa-cog fa-lg"></i
-								></a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<!-- Timer and Buttons -->
-			<div class="container-fluid">
-				<div class="row">
-					<!-- Time Left and Progress Bar -->
-					<div class="col-12 pt-0 d-flex justify-content-center">
-						<div class="radial-progress-bar progress-value">
-							<div class="overlay">
-								<h1 id="timeLeft"></h1>
+						<!-- Alert -->
+						<div class="alert alert-danger alert-dismissible fade show" role="alert">
+							<span id="alertMessage"></span>
+							<button type="button" class="close" onclick="dismissAlert()" aria-label="Close">
+								<span aria-hidden="true"><i class="fas fa-times fa-lg mt-1"></i></span>
+							</button>
+						</div>
+						
+						<!-- Pomo Nav Bar -->
+						<div class="container mt-3">
+							<div class="row justify-content-end">
+								<div class="col-6 px-0">
+									<ul class="nav nav-pills">
+										<div class="col-lg-4 px-0">
+											<div class="pomo">
+												<div class="pomo-btn">
+													<a class="btn" id="pomodoros" data-toggle="tab" role="tab" aria-selected="false" href="/">Tập&nbspTrung</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-4 px-0">
+											<div class="pomo">
+												<div class="pomo-btn">
+													<a class="btn" id="shortBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Nghỉ&nbspNgắn</a>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-4 px-0">
+											<div class="pomo">
+												<div class="pomo-btn">
+													<a class="btn" id="longBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Nghỉ&nbspDài</a>
+												</div>
+											</div>
+										</div>
+									</ul>
+								</div>
+								<div class="col-3">
+									<ul class="nav nav-pills justify-content-end">
+										<li class="nav-item">
+											<a class="nav-link px-2 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#toDoModal" href="#"
+												><i class="fas fa-tasks fa-lg"></i
+											></a>
+										</li>
+										<li class="nav-item pl-2 pr-0">
+											<a class="nav-link px-2 mx-1 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#loggingModal" href="#"
+												><i class="fas fa-chart-bar fa-lg"></i
+											></a>
+										</li>
+										<li class="nav-item">
+											<a
+												class="nav-link pl-2 pr-0 ml-2 d-none d-md-block button-pressed-no-shadow"
+												data-toggle="modal"
+												data-target="#settingsModal"
+												href="#"
+												><i class="fas fa-cog fa-lg"></i
+											></a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-					</div>
-					<!-- Start, Stop, Reset Buttons -->
-					<div class="col-12">
-						<div class="container d-flex justify-content-around">
+						<!-- Timer and Buttons -->
+						<div class="container-fluid">
 							<div class="row">
-								<div class="col-md-4">
-									<button type="button" class="button-pressed-effect btn btn-lg btn-success w-100 mb-3" id="startButton">Bắt Đầu</button>
+								<!-- Time Left and Progress Bar -->
+								<div class="col-12 pt-0 d-flex justify-content-center">
+									<div class="radial-progress-bar progress-value">
+										<div class="overlay">
+											<h1 id="timeLeft"></h1>
+										</div>
+									</div>
 								</div>
-								<div class="col-md-4">
-									<button type="button" class="button-pressed-effect btn btn-danger btn-lg w-100 mb-3" id="stopButton">Dừng Lại</button>
-								</div>
-								<div class="col-md-4">
-									<button type="button" class="button-pressed-effect btn btn-secondary btn-lg w-100 mb-3" id="resetButton">Đặt Lại</button>
+								<!-- Start, Stop, Reset Buttons -->
+								<div class="col-12">
+									<div class="container d-flex justify-content-around">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="pomo">
+													<div class="pomo-btn">
+													<button type="button" class="btn" id="startButton">Bắt&nbspĐầu</button>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="pomo">
+													<div class="pomo-btn">
+													<button type="button" class="btn" id="stopButton">Dừng&nbspLại</button>
+													</div>
+												</div>
+											</div>
+											<div class="col-md-4">
+												<div class="pomo">
+													<div class="pomo-btn">
+													<button type="button" class="btn" id="resetButton">Đặt&nbspLại</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -155,7 +193,6 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- Modals -->
 		<!-- Settings Modal -->
 		<div
@@ -182,12 +219,12 @@
 								<p class="h6 text-muted">Thời gian (Phút)</p>
 							</div>
 							<div class="col-lg-4">
-
+								<div class="input-group mb-2">
 									<div class="input-group-prepend">
 										<span class="input-group-text" id="inputGroup-sizing-default">Tập Trung</span>
 									</div>
 									<input id="pomodoroInput" type="number" min="1" step="1" class="form-control" />
-
+								</div>
 							</div>
 							<div class="col-lg-4">
 								<div class="input-group mb-2">
@@ -222,6 +259,35 @@
 						</div>
 
 						<hr />
+
+						<!-- Tick Sounds -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Âm thanh tíc tắc</p>
+							</div>
+							<div class="col">
+								<label class="switch">
+									<input id="tickSoundInput" type="checkbox" />
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+
+						<hr />
+
+						<!-- Dark Mode -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Chế độ Tối</p>
+							</div>
+							<div class="col">
+								<label class="switch mb-0">
+									<input id="darkModeToggle" type="checkbox" />
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<hr />
 						<!-- Long Break Interval -->
 						<div class="row ml-1">
 							<div class="col">
@@ -242,20 +308,7 @@
 						</div>
 
 						<hr />
-						<!-- Tick Sounds -->
-						<div class="row ml-1">
-							<div class="col">
-								<p class="h6 text-muted mt-2">Âm thanh tíc tắc</p>
-							</div>
-							<div class="col">
-								<label class="switch">
-									<input id="tickSoundInput" type="checkbox" />
-									<span class="slider round"></span>
-								</label>
-							</div>
-						</div>
 
-						<hr />
 						<!-- Ending Notification Sound -->
 						<div class="row ml-1">
 							<div class="col-sm-6">
@@ -272,10 +325,10 @@
 						</div>
 
 						<hr />
-						<!-- Available Background Music -->
+						<!-- Available Focus Music -->
 						<div class="row ml-1">
 							<div class="col">
-								<p class="h6 text-muted mt-2">Nhạc nền</p>
+								<p class="h6 text-muted mt-2">Nhạc khi Tập trung (sẵn có)</p>
 							</div>
 							<div class="col">
 								<select class="form-control custom-select" id="backgroundMusicOptions" style="width: 10rem">
@@ -291,36 +344,62 @@
 									<option>Sa mạc lộng gió</option>
 									<option>Mèo kêu "rừ rừ"</option>
 									<option>Rừng mưa nhiệt đới</option>
-									<option>URL nhạc tự chọn</option>
 								</select>
 							</div>
 						</div>
 
-						<hr />
-						<!-- URL Background Music -->
+
+						<!-- URL Focus Music -->
 						<div class="row ml-1">
 							<div class="col">
-								<p class="h6 text-muted mt-2">Nhạc nền</p>
+								<p class="h6 text-muted mt-2">Nhạc khi Tập trung (URL)</p>
 							</div>
 							<div class="col">
-								<input type="text" id="text" />
-								<input type="button" id="btn" value="Submit" onClick="javascript: window.open('http://www.youtube.com/' + document.getElementById('text').value);" />
+								<input type="url" id="url" />
+								<input type="button" id="btn" value="Lưu"/>
 							</div>
 						</div>
-						
+
 						<hr />
-						<!-- Dark Mode -->
+
+						<!-- Available Break Music -->
 						<div class="row ml-1">
 							<div class="col">
-								<p class="h6 text-muted mt-2">Chế độ Tối</p>
+								<p class="h6 text-muted mt-2">Nhạc khi Nghỉ (sẵn có)</p>
 							</div>
 							<div class="col">
-								<label class="switch mb-0">
-									<input id="darkModeToggle" type="checkbox" />
-									<span class="slider round"></span>
-								</label>
+								<select class="form-control custom-select" id="backgroundMusicOptions" style="width: 10rem">
+									<option>Tắt</option>
+									<option>Mưa rơi</option>
+									<option>Mưa rào</option>
+									<option>Mưa bão</option>
+									<option>Sóng biển</option>
+									<option>Sông suối</option>
+									<option>Trong rừng</option>
+									<option>Lửa trại</option>
+									<option>Gió nhẹ</option>
+									<option>Sa mạc lộng gió</option>
+									<option>Mèo kêu "rừ rừ"</option>
+									<option>Rừng mưa nhiệt đới</option>
+								</select>
 							</div>
 						</div>
+
+
+
+						<!-- URL Break Music -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2" aria-placeholder="Chọn 'Tắt' Nhạc khi Nghỉ (sẵn có)">Nhạc khi Nghỉ (URL)</p>
+							</div>
+							<div class="col">
+								<input type="url" id="url" />
+								<input type="button" id="btn" value="Lưu"/>
+							</div>
+						</div>
+
+						<hr />
+
 					</div>
 					<div class="modal-footer">
 						<div class="container d-flex justify-content-center my-1">
@@ -422,7 +501,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="footer-credit">
-                                <p>Designed by&nbsp<a href="index.html" class="footer-brand">Inner Space</a>&nbspwith lots of love 💗
+                                <p>Designed by&nbsp<a href="index.html" class="footer-brand">Sereny</a>&nbspwith lots of love 💗
                                 </p>
                             </div>
                         </div>
