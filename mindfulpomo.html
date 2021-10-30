@@ -1,0 +1,532 @@
+<!-- no nav footer ...-->
+
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Mindful Pomo | Sereny</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Sereny" name="keywords">
+        <meta content="Your agile best friend whom you can find more than you need, until you need it!" name="description">
+
+        <!-- Favicon -->
+        <link href="img/earth.png" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+        <script src="js/main.js"></script>
+
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-169261747-1"></script>
+		<script
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="pomo/css/styles.css" type="text/css" />
+
+		
+    </head>
+
+    <body>
+
+<!--background video-->
+<video id="background-video" autoplay loop muted poster="https://f47-zpg.zdn.vn/9078880543296826223/2a8804c14eb686e8dfa7.jpg">
+	<source src="media/pomovid2.mp4" type="video/mp4">
+  </video>
+<style>
+	#background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (max-width: 750px) {
+    #background-video { display: visible; }
+    body {
+      background: url("https://f47-zpg.zdn.vn/9078880543296826223/2a8804c14eb686e8dfa7.jpg") no-repeat;
+      background-size: cover;
+    }
+}
+</style>
+
+		<!-- Main Content -->
+
+<style>
+	.border-bottom {
+    	border-bottom: 0px!important;
+	}
+</style>
+
+		<div class="border-bottom" id="mainPage">
+			<!-- Alert -->
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+				<span id="alertMessage"></span>
+				<button type="button" class="close" onclick="dismissAlert()" aria-label="Close">
+					<span aria-hidden="true"><i class="fas fa-times fa-lg mt-1"></i></span>
+				</button>
+			</div>
+
+			<!-- Return Prev Page -->
+			<div class="col-3">
+				<div class="return">
+					<a href="morning.html">
+						<i class="fas fa-arrow-circle-left" width="30px" height="30px">
+						</i>
+					</a>
+				</div>
+			</div>
+
+			<style>
+				a {
+				color: #000000!important;
+				}
+
+				.return {
+				padding-left: 15px;
+				font-size: 20px;
+				font-weight: 500px;
+				text-decoration: none;
+				font-family: 'Patrick Hand', sans-serif;
+
+				}
+
+				i:hover {
+				color: rgb(255, 109, 109);
+				}
+			</style>
+
+			<!-- Pomo Nav Bar -->
+
+			<div class="container mt-3">
+				<div class="row justify-content-end">
+					<div class="col-6 px-0">
+						<ul class="nav nav-pills">
+							<div class="col-lg-4 px-0">
+								<div class="pomo">
+									<div class="pomo-btn">
+										<button class="btn" id="pomodoros" data-toggle="tab" role="tab" aria-selected="false" href="/">Tập&nbspTrung</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 px-0">
+								<div class="pomo">
+									<div class="pomo-btn">
+										<button class="btn" id="shortBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Nghỉ&nbspNgắn</button>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 px-0">
+								<div class="pomo">
+									<div class="pomo-btn">
+										<button class="btn" id="longBreak" data-toggle="tab" role="tab" aria-selected="false" href="/">Nghỉ&nbspDài</button>
+									</div>
+								</div>
+							</div>
+						</ul>
+					</div>
+					<div class="col-3">
+						<ul class="nav nav-pills justify-content-end">
+							<li class="nav-item">
+								<a class="nav-link px-2 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#toDoModal" href="#"
+									><i class="fas fa-tasks fa-lg"></i
+								></a>
+							</li>
+							<li class="nav-item pl-2 pr-0">
+								<a class="nav-link px-2 mx-1 d-none d-md-block button-pressed-no-shadow" data-toggle="modal" data-target="#loggingModal" href="#"
+									><i class="fas fa-chart-bar fa-lg"></i
+								></a>
+							</li>
+							<li class="nav-item">
+								<a
+									class="nav-link pl-2 pr-0 ml-2 d-none d-md-block button-pressed-no-shadow"
+									data-toggle="modal"
+									data-target="#settingsModal"
+									href="#"
+									><i class="fas fa-cog fa-lg"></i
+								></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Timer and Buttons -->
+			<div class="container-fluid">
+				<div class="row">
+					<!-- Time Left and Progress Bar -->
+					<div class="col-12 pt-0 d-flex justify-content-center">
+
+							<div class="overlay">
+								<h1 id="timeLeft"></h1>
+							</div>
+
+					</div>
+
+<style>
+	h1{
+		color: #ffffff;
+		font-family: 'Patrick Hand';
+		padding-left: 20px;
+		padding-right: 20px;
+		border-radius: 20px;
+		margin-top: 30%;
+		margin-bottom: 30%;
+		background-color: rgba(0, 0, 0, 0.3);
+		position: inherit;
+		font-size: 150px!important;
+	}
+</style>
+
+					<!-- Start, Stop, Reset Buttons -->
+				<div class="container mt-3">
+					<div class="row justify-content-around">
+						<div class="col-6 px-0">
+							<ul class="nav nav-pills">
+								<div class="col-lg-4 px-0">
+									<div class="pomo">
+										<div class="pomo-btn">
+										<button type="button" class="btn" id="startButton">Bắt&nbspĐầu</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 px-0">
+									<div class="pomo">
+										<div class="pomo-btn">
+										<button type="button" class="btn" id="stopButton">Dừng&nbspLại</button>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 px-0">
+									<div class="pomo">
+										<div class="pomo-btn">
+										<button type="button" class="btn" id="resetButton">Đặt&nbspLại</button>
+										</div>
+									</div>
+								</div>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<!-- Modals -->
+		<!-- Settings Modal -->
+		<div
+			class="modal fade"
+			data-keyboard="true"
+			id="settingsModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="settingsModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title ml-3">Cài Đặt</h3>
+						<button type="button" class="close button-pressed-no-shadow" data-dismiss="modal" aria-label="Close">
+							<span class="modal-close-button mt-2" aria-hidden="true"><i class="fas fa-times fa-lg mt-2 mr-2"></i></span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<!-- Selecting Timings -->
+						<div class="row ml-1">
+							<div class="col-12">
+								<p class="h6 text-muted">Thời gian (Phút)</p>
+							</div>
+							<div class="col-lg-4">
+								<div class="input-group mb-2">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Tập Trung</span>
+									</div>
+									<input id="pomodoroInput" type="number" min="1" step="1" class="form-control" />
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="input-group mb-2">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Nghỉ Ngắn</span>
+									</div>
+									<input id="shortBreakInput" type="number" min="1" step="1" class="form-control" />
+								</div>
+							</div>
+							<div class="col-lg-4">
+								<div class="input-group mb-2">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="inputGroup-sizing-default">Nghỉ Dài</span>
+									</div>
+									<input id="longBreakInput" type="number" min="1" step="1" class="form-control" />
+								</div>
+							</div>
+						</div>
+
+						<hr />
+						<!-- Auto Start Next Round -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Tự động tiếp tục</p>
+							</div>
+							<div class="col">
+								<label class="switch">
+									<input id="autoStartRoundsInput" type="checkbox" />
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+
+						<hr />
+
+						<!-- Tick Sounds -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Âm thanh tíc tắc</p>
+							</div>
+							<div class="col">
+								<label class="switch">
+									<input id="tickSoundInput" type="checkbox" />
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+
+						<hr />
+
+						<!-- Dark Mode -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Chế độ Tối</p>
+							</div>
+							<div class="col">
+								<label class="switch mb-0">
+									<input id="darkModeToggle" type="checkbox" />
+									<span class="slider round"></span>
+								</label>
+							</div>
+						</div>
+						<hr />
+						<!-- Long Break Interval -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Khoảng thời gian nghỉ dài</p>
+							</div>
+							<div class="col">
+								<form>
+									<div class="row">
+										<div class="col">
+											<input type="range" class="custom-range" min="1" max="12" id="longBreakIntervalInput" />
+										</div>
+										<div class="col">
+											<p class="font-weight-bold" id="sliderValue"></p>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+
+						<hr />
+
+						<!-- Ending Notification Sound -->
+						<div class="row ml-1">
+							<div class="col-sm-6">
+								<p class="h6 text-muted mt-2">Thông báo kết thúc hẹn giờ</p>
+							</div>
+							<div class="col-sm-6">
+								<div class="input-group mb-2">
+									<input id="notificationTextInput" type="number" min="0" step="1" class="form-control col-sm-3" />
+									<div class="input-group-prepend">
+										<span class="input-group-text notification-text">&nbsp&nbspphút cuối</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<hr />
+						<!-- Available Focus Music -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Nhạc khi Tập trung (sẵn có)</p>
+							</div>
+							<div class="col">
+								<select class="form-control custom-select" id="backgroundMusicOptions" style="width: 10rem">
+									<option>Tắt</option>
+									<option>Mưa rơi</option>
+									<option>Mưa rào</option>
+									<option>Mưa bão</option>
+									<option>Sóng biển</option>
+									<option>Sông suối</option>
+									<option>Trong rừng</option>
+									<option>Lửa trại</option>
+									<option>Gió nhẹ</option>
+									<option>Sa mạc lộng gió</option>
+									<option>Mèo kêu "rừ rừ"</option>
+									<option>Rừng mưa nhiệt đới</option>
+								</select>
+							</div>
+						</div>
+
+						<!-- Available Break Music -->
+						<div class="row ml-1">
+							<div class="col">
+								<p class="h6 text-muted mt-2">Nhạc khi Nghỉ (sẵn có)</p>
+							</div>
+							<div class="col">
+								<select class="form-control custom-select" id="backgroundMusicOptions" style="width: 10rem">
+									<option>Tắt</option>
+									<option>Mưa rơi</option>
+									<option>Mưa rào</option>
+									<option>Mưa bão</option>
+									<option>Sóng biển</option>
+									<option>Sông suối</option>
+									<option>Trong rừng</option>
+									<option>Lửa trại</option>
+									<option>Gió nhẹ</option>
+									<option>Sa mạc lộng gió</option>
+									<option>Mèo kêu "rừ rừ"</option>
+									<option>Rừng mưa nhiệt đới</option>
+								</select>
+							</div>
+						</div>
+
+					</div>
+					<div class="modal-footer">
+						<div class="container d-flex justify-content-center my-1">
+							<button type="button" class="btn btn-primary button-pressed-no-shadow shadow-none" data-dismiss="modal" id="saveButton">
+								Lưu thay đổi
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Logging Modal -->
+		<div class="modal fade" data-keyboard="true" id="loggingModal" tabindex="-1" role="dialog" aria-labelledby="loggingModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-xl">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title ml-3">Dữ liệu</h3>
+						<button type="button" class="close button-pressed-no-shadow" data-dismiss="modal" aria-label="Close">
+							<span class="modal-close-button" aria-hidden="true"><i class="fas fa-times fa-lg mt-2 mr-2"></i></span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="log-modal-content">
+							<table class="table table-striped table-responsive-md" id="logDataTable">
+								<thead>
+									<tr>
+										<th scope="col">Các phiên</th>
+										<th scope="col">Ngày</th>
+										<th scope="col">Thời gian bắt đầu</th>
+										<th scope="col">Thời gian kết thúc</th>
+										<th scope="col">Thời gian tập trung</th>
+										<th scope="col">Ghi chú</th>
+										<th scope="col"></th>
+									</tr>
+								</thead>
+								<tbody id="locationUpdateLog"></tbody>
+							</table>
+							<div class="container d-flex justify-content-center">
+								<span id="NoDataLoggedText">Chưa có dữ liệu</span>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="container d-flex justify-content-center">
+							<button type="button" class="btn btn-primary button-pressed-no-shadow shadow-none" id="clearButton">Xóa dữ liệu</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- To Do Modal -->
+		<div class="modal fade" data-keyboard="true" id="toDoModal" tabindex="-1" role="dialog" aria-labelledby="toDoModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title ml-3">Todo</h3>
+						<button type="button" class="close button-pressed-no-shadow" data-dismiss="modal" aria-label="Close">
+							<span class="modal-close-button" aria-hidden="true"><i class="fas fa-times fa-lg mt-2 mr-2"></i></span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="container todo-main-content">
+							<!-- Task Input  -->
+							<div class="input-group mb-3">
+								<input
+									id="taskInput"
+									type="text"
+									class="form-control"
+									placeholder="Tên nhiệm vụ"
+									aria-label="Task name"
+									aria-describedby="addTaskButton"
+								/>
+								<div class="input-group-append">
+									<button class="btn btn-outline-secondary button-pressed-no-shadow" id="addTaskButton" onclick="submitTask()" type="button">
+										Thêm nhiệm vụ
+									</button>
+								</div>
+							</div>
+							<div class="container d-flex justify-content-center">
+								<span id="NoTaskTodayText">Trống</span>
+							</div>
+							<!-- Task items -->
+							<ul class="list-group" id="listOfTasks"></ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="container d-flex justify-content-center">
+							<button type="button" class="btn btn-primary button-pressed-no-shadow shadow-none" id="clearTasksButton">Xóa nhiệm vụ</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.0/howler.js"></script>
+		<script src="pomo/js/app.js"></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+
+
+    </body>
+</html>
+

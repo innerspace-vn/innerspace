@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="vi">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html" ; charset="UTF-8" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- External CSS Document(s) -->
+		<link rel="stylesheet" type="text/css" href="css/styles.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+		<title>Spark - Nhật kí hội họa | Sereny</title>
+
+		<!-- Eternal JavaScript Document(s) -->
+		<script type="text/javascript" src="journal/js/canvas.js"></script>
+
+		<style>
+			@charset "UTF-8";
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				font-family: 'Patrick Hand', sans-serif;
+				color: #2c2c2c;
+				letter-spacing: 0.05em;
+				line-height: 2em;
+				font-weight: 500px;
+			}
+
+			.section {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				margin: 0 auto;
+				width: 80%;
+				max-width: 700px;
+				text-align: center;
+			}
+
+			p {
+				font-size: 25px;
+			}
+
+			body {
+				background-color: #f7cac9;
+			}
+
+			.button {
+				padding: 6px 20px;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 1px;
+				color: #F7CAC9;
+				background: #343148;
+				border-radius: 0;
+				transition: .3s;
+				font-family: inherit;
+				display: inline;
+				text-align: center;
+				text-decoration: none;
+				outline: none;
+			}
+
+			.button:hover {
+				color: #343148;
+				background: #ffffff;
+			}
+
+			h1 {
+				text-align: center;
+				color: rgb(255, 109, 109);
+				font-size: 50px;
+
+			}
+
+			textarea {
+				width: 700px;
+				height: 700px;
+				resize: none;
+				border-radius: 16px;
+				border: 0px;
+				padding: 30px 30px;
+				font-family: inherit;
+				font-size: 20px;
+				text-transform: none;
+			}
+
+			textarea:focus {
+				outline: none;
+			}
+
+			#quote {
+				text-align: center;
+				margin: 0 auto;
+				padding: 5%;
+				font-size: 16px;
+				background-color: white;
+				border-radius: 16px;
+				width: 80%;
+			}
+
+			::placeholder {
+				opacity: 0.6;
+			}
+
+
+			#wrapper {
+				position: relative;
+				margin: 0 auto;
+				max-width: 900px;
+			}
+
+			/* placeholder for canvas element */
+			#canvasPlaceholder {
+				width: 700px;
+				height: 600px;
+				border-radius: 16px;
+				margin: auto;
+				cursor: crosshair;
+			}
+
+			#buttons {
+				position: absolute;
+				z-index: 2;
+				line-height: 0;
+				vertical-align: middle;
+				display: flex;
+				flex-direction: column;
+				width: 10%;
+				max-width: 100px;
+				margin: 0 auto;
+				margin-top: 10px;
+			}
+
+			.canvasButton {
+				cursor: pointer;
+				opacity: 0.6;
+				text-decoration: none;
+				outline: none;
+				color: none;
+				background-color: Transparent;
+				border: none;
+				margin: 20%;
+				-moz-user-select: -moz-none;
+				-khtml-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+			}
+
+			.canvasButton:hover {
+				opacity: 0.4;
+			}
+
+			.canvasButton:active {
+				opacity: 0.8;
+			}
+			
+			::selection {
+				background: #fbf0fb;
+			}
+			
+
+
+			/* drawing canvas element visible to user */
+			#drawingCanvas {
+				width: 700px;
+				height: 600px;
+				border-radius: 16px;
+				position: absolute;
+				overflow: visible;
+				background-color: transparent;
+			}
+
+			/* temporary canvas being updated every time user draws */
+			#tempCanvas {
+				position: absolute;
+				width: 700px;
+				height: 600px;
+				border-radius: 16px;
+				overflow: visible;
+			}
+
+			.noscript {
+				font-size: 14px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<!-- return prev page -->
+		<a href="morning.html" class="return">
+			<i class="fas fa-arrow-circle-left">
+			</i>
+		</a>
+		<style>
+			a {
+			color: #000000!important;
+			}
+
+			.return {
+			padding-left: 15px;
+			font-size: 20px;
+			font-weight: 500px;
+			text-decoration: none;
+			font-family: 'Patrick Hand', sans-serif;
+			}
+
+			i:hover {
+			color: rgb(255, 109, 109);
+			}
+
+		</style>
+		<!-- random prompts given to the user. a new one can be requested by pressing the button-->
+		<div class="section">
+			<h1>💭 Gợi ý cho Nhật kí của bạn 💭</h1>
+			<div id="prompt"></div>
+		</div>
+
+		<div class="section">
+			<button class="button" id="getPrompt" button onclick="getPrompt()">
+				Thay đổi Gợi ý</button>
+		</div>
+
+
+		<script>
+			function getPrompt() {
+				var prompts = [];
+				prompts.push("Hãy kể về tâm trạng của bạn hôm nay!");
+				prompts.push("Hãy kể về giấc mơ gần đây nhất mà bạn nhớ!");
+				prompts.push("Hãy kể về những món quà bạn mong chờ được tặng trong tương lai!");
+				prompts.push("Hãy kể về những ước muốn và dự định trong tương lai của bạn!");
+				prompts.push("Hãy kể về một kí ức tuổi thơ mà bạn yêu thích nhất!");
+				prompts.push("Hãy kể một điều bạn đã từng ước mơ khi còn bé!");
+				prompts.push("Nếu như bạn có một cây đũa thần có thể biến mọi ước mơ của bạn thành hiện thực, và không một ai trên vũ trụ này biết về cây đũa ấy ngoài bạn, bạn sẽ làm gì?");
+				prompts.push("Ai/ Điều gì luôn luôn tạo động lực cho bạn?");
+				prompts.push("Bạn cảm thấy vô tư hay nặng nề về mặt tình cảm? Hãy vẽ một thứ gì đó nhẹ hoặc nặng thể hiện cảm giác của bạn.");
+				prompts.push("Bạn có một đồ vật gì đó quan trọng về mặt tình cảm ở gần bạn không? Hãy về đồ vật ấy hoặc một kỷ niệm gắn liền với nó.");
+				prompts.push("Vẽ lại một một sự kiện nào đó từ tuần trước và viết lại tâm trạng của bạn lúc đó?");
+				prompts.push("Nếu bạn là một con vật, bạn sẽ chọn là con gì? Con vật đó tượng trưng cho điều gì đối với bạn?");
+				prompts.push("Nếu bạn phải chọn một thế giới hư cấu để sống, thế giới ấy sẽ ở đâu? Bạn sẽ thêm những yếu tố gì để làm cho thế giới hư cấu ấy là nơi đáng sống nhất đối với bạn?");
+				prompts.push("Vẽ những vòng tròn cùng với hơi thở của bạn. Bắt đầu khi bạn hít vào và thở ra khi thực hiện xong một nửa vòng tròn. Kết thúc thở ra và hoàn thành nửa vòng tròn còn lại.");
+				prompts.push("Hãy sáng tác một câu chuyện bắt đầu vào một ngày lạnh nhất của mùa đông. Nói về những gì nhân vật của bạn làm để giữ ấm và những cuộc phiêu lưu xảy ra vào ngày đầy bông tuyết này.");
+				prompts.push("Hãy viết về một đồ ăn bạn sẽ không bao giờ thử và kể lí do vì sao.");
+				prompts.push("Bạn cảm thấy thế nào khi làm việc nhóm trong một dự án cộng đồng? Bạn nghĩ sẽ có những bất đồng gì có thể xảy ra? Nếu được trở thành lãnh đạo của dự án, bạn sẽ làm gì để hóa giải những bất đồng ấy?.");
+
+				var prompt = prompts[Math.floor(Math.random() * prompts.length)];
+
+				document.getElementById("prompt")
+					.innerHTML = '<p>' + prompt + '</p>';
+			}
+		</script>
+
+
+		<!-- canvas heading -->
+		<h1>🎨 Bảng vẽ 🎨</h1>
+
+		<!-- canvas features, such as draw, eraser, increase pen stroke, and clear canvas -->
+		<div id="wrapper">
+			<div id="buttons">
+				<button class="canvasButton" id="pen">
+					<img style="width: 100%" src="https://cdn.discordapp.com/attachments/802400122889699328/802813463381934120/paint-brush.png" onclick="tool = pen; context.strokeStyle = '#514d44';" />
+				</button>
+
+				<button class="canvasButton" id="eraser">
+					<img style="width: 100%" src="https://cdn.discordapp.com/attachments/802400122889699328/802813695267831848/eraser.png" onclick="context.strokeStyle = '#FFF';" />
+				</button>
+
+				<button class="canvasButton">
+					<img style="width: 100%" src="https://cdn.discordapp.com/attachments/802400122889699328/802783792820387870/smol_circle.png" onclick="context.lineWidth--;" />
+				</button>
+
+				<button class="canvasButton">
+					<img style="width: 100%" src="https://cdn.discordapp.com/attachments/802400122889699328/802783752602386452/circle.png" onclick="context.lineWidth++;" />
+				</button>
+
+				<button class="canvasButton" id="clear_canvas" button onclick="clear_canvas()">
+					<img style="width: 100%" src="https://img.icons8.com/wired/512/000000/trash.png" style='transform:translate(0px, 3px)' />
+				</button>
+
+			</div>
+
+
+			<div id="canvasPlaceholder">
+				<!-- text after noscript will appear if user is not using a browser compatible with html canvas -->
+
+				<canvas id="drawingCanvas" height="600px" width="700px">
+					<p class="noscript">Sereny Team chân thành xin lỗi bạn! Hiện tại trình duyệt của bạn chưa tương thích với website của chúng tôi. Để có thể truy cập website, hãy sử dụng một trình duyệt khác tương thích. <br />Dưới đây là danh sách những trình duyệt tương thích <a href="http://www.google.com/chrome">Google Chrome</a>, <a href="http://www.opera.com">Opera</a>, <a href="http://www.mozilla.com">Firefox</a>, <a href="http://www.apple.com/safari">Safari</a>, <br />and <a href="http://www.konqueror.org">Konqueror</a>. Bên cạnh đó, hãy chắc chắn rằng JavaScript của bạn đang được bật. <br/>Xin cảm ơn bạn!</p>
+				</canvas>
+			</div>
+
+			<!-- interactive button for saving canvas -->
+			<div class="section">
+				<button class="button" id="save canvas" button onclick="save_img()">
+					Lưu Bảng vẽ</button>
+			</div>
+		</div>
+
+		<!-- journal element -->
+		<div class="section">
+			<h1>📃 Nhật kí 📃</h1>
+			<textarea id="journal" textarea name="journal" placeholder="Nhập vào đây nha ~" spellcheck="false"></textarea>
+
+			<div class="section">
+
+				<!-- interactive button for saving journal -->
+				<button class="button" id="save journal" button onclick="save_journal()">
+					Lưu Nhật kí</button>
+			</div>
+		</div>
+
+
+		<!-- script file for drawing canvas, saving canvas, and saving journal -->
+		<script>
+			var context;
+
+			// if window can add event listener, then load an event listener and initialize canvas
+			if (window.addEventListener) {
+				window.addEventListener('load', function () {
+
+					var canvas, canvaso, contexto;
+
+					var tool;
+					var tool_default = 'pen';
+
+					// initializes canvas
+					function init() {
+						canvaso = document.getElementById('drawingCanvas');
+
+						if (!canvaso) {
+							alert('Error! Canvas element not found.');
+							return;
+						}
+						if (!canvaso.getContext) {
+							alert('Error! No canvas.getContext!');
+							return;
+						}
+
+						contexto = canvaso.getContext('2d');
+						if (!contexto) {
+							alert('Error! Failed to getContext!');
+							return;
+						}
+
+						var container = canvaso.parentNode;
+						canvas = document.createElement('canvas');
+						if (!canvas) {
+							alert('Error! Cannot create a new canvas element!');
+							return;
+						}
+
+						canvas.id = 'tempCanvas';
+						canvas.width = canvaso.width;
+						canvas.height = canvaso.height;
+						container.appendChild(canvas);
+						context = canvas.getContext('2d');
+
+						// set defaults
+						context.strokeStyle = "#767676"
+						context.lineWidth = 5.0;
+
+						// set canvas
+						context.fillStyle = "#FFF";
+						context.fillRect(0, 0, canvas.width, canvas.height);
+
+						// set default tool
+						var tool_select = document.getElementById('pen');
+						if (!tool_select) {
+							alert('Error! Failed to get the select element!');
+							return;
+						}
+
+						// add an event listener to the current tool selected
+						tool_select.addEventListener('change', ev_tool_change, false);
+
+						// if the default tool isn't null, then set current tool to default(?)
+						if (tools[tool_default]) {
+							tool = new tools[tool_default]();
+							tool_select.value = tool_default;
+						}
+
+						// event listeners for pressing down on mouse, moving mouse, and pressing off of mouse
+						canvas.addEventListener('mousedown', ev_canvas, false);
+						canvas.addEventListener('mousemove', ev_canvas, false);
+						canvas.addEventListener('mouseup', ev_canvas, false);
+
+						// initializes a prompt on load
+						getPrompt();
+
+					}
+
+					function ev_canvas(ev) {
+						if (ev.layerX || ev.layerX == 0) { // Firefox 
+							ev._x = ev.layerX;
+							ev._y = ev.layerY;
+						} else if (ev.offsetX || ev.offsetX == 0) { // Opera 
+							ev._x = ev.offsetX;
+							ev._y = ev.offsetY;
+						}
+
+						// get the tool's event handler. 
+						var func = tool[ev.type];
+						if (func) {
+							func(ev);
+						}
+					}
+
+					// changes current tool (not necessary for current implementation)
+					function ev_tool_change(ev) {
+						if (tools[this.value]) {
+							tool = new tools[this.value]();
+						}
+					}
+
+					// create the temporary canvas on top of the canvas, which is cleared each time the user draws so a new canvas can be drawn
+					function img_update() {
+						contexto.drawImage(canvas, 0, 0);
+						context.clearRect(0, 0, canvas.width, canvas.height);
+					}
+
+					// list of tools
+					var tools = {};
+
+					// pen tool's functionality
+					tools.pen = function () {
+						var tool = this;
+						this.started = false;
+
+						// registers mouse has been clicked and will start to move
+						this.mousedown = function (ev) {
+							context.beginPath();
+							context.moveTo(ev._x, ev._y);
+							tool.started = true;
+						};
+
+						// draws with pen tool while mouse is moving, if mouse has been clicked
+						this.mousemove = function (ev) {
+							if (tool.started) {
+								context.lineTo(ev._x, ev._y);
+								context.stroke();
+							}
+						};
+
+						// registers mouse is no longer being pressed, and will stop
+						this.mouseup = function (ev) {
+							if (tool.started) {
+								tool.mousemove(ev);
+								tool.started = false;
+								img_update();
+							}
+						};
+					};
+
+					init();
+
+				}, false);
+			}
+
+			// saves canvas to a png file
+			function save_img() {
+				// gets canvas element and converts it into a dataURL
+				var canvas = document.getElementById('drawingCanvas');
+				var data = canvas.toDataURL('image/png');
+
+				// creates an element of type link
+				var a = document.createElement('a');
+				// sets its link to the converted canvas data
+				a.href = data;
+				// sets file name to be downloaded
+				a.download = 'emotions.png';
+				// executes link
+				a.click();
+			}
+
+			// clears canvas
+			function clear_canvas() {
+				// gets canvas element 
+				var canvas = document.getElementById('drawingCanvas');
+				// gets contents of canvas
+				var context = canvas.getContext('2d');
+				// sets fill style to be white
+				context.fillStyle = "#FFF";
+				// fills the canvas 
+				context.fillRect(0, 0, canvas.width, canvas.height);
+			}
+
+			// saves journal entry to a txt file
+			function save_journal() {
+				// gets textarea's value 
+				var text = document.getElementById("journal")
+					.value;
+
+				// retains all line breaks to keep journal consistent
+				text = text.replace(/\n/g, "\r\n");
+
+				// TODO: comment
+				var blob = new Blob([text], { type: "text/plain" });
+				var anchor = document.createElement("a");
+				anchor.download = "journal-entry.txt";
+				anchor.href = window.URL.createObjectURL(blob);
+				anchor.target = "_blank";
+				anchor.style.display = "none"; // just to be safe!
+				document.body.appendChild(anchor);
+				anchor.click();
+				document.body.removeChild(anchor);
+			}
+		</script>
+
+
+	</body>
+
+</html>

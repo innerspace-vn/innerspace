@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <meta charset="utf-8">
+        <title>Bình Minh | Sereny</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Sereny" name="keywords">
+        <meta content="Your agile best friend whom you can find more than you need, until you need it!" name="description">
+
+        <!-- Favicon -->
+        <link href="img/earth.png" rel="icon">
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/flaticon/font/flaticon.css" rel="stylesheet"> 
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+        <!--music player-->
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'>
+        <link rel="stylesheet" href="music-player/style.css">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Nav Bar Start -->
+
+        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
+            <div class="container-fluid">
+                <a href="index.html" class="navbar-brand">Sereny</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="index.html" class="nav-item nav-link">Trang Chủ</a>
+                        <a href="about.html" class="nav-item nav-link">Giới Thiệu</a>
+                        <a href="morning.html" class="nav-item nav-link active">Bình Minh</a>
+                        <a href="afternoon.html" class="nav-item nav-link">Hoàng Hôn</a>
+                        <a href="evening.html" class="nav-item nav-link">Đêm Tối</a>
+                        <a href="specials.html" class="nav-item nav-link">Sự Kiện Đặc Biệt</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Nav Bar End -->
+
+        <!-- Page Header Start -->
+        <div class="page-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
+                        <h2>Các hoạt động</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+        <!-- Blog Start -->
+        <div class="blog">
+            <div class="row blog-page">
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="blog-item">
+                        <div class="blog-item1">
+                            <div class="blog-img">
+                                <img src="img/mindfulness.png" alt="mindful pomo">
+                            </div>
+                            <a class="btn" href="mindfulpomo.html">Mindful Pomo<i class="fa fa-angle-right"></i></a>
+                            <p>
+                                <br>
+                                ✅ Thiền Chánh niệm (Mindfulness) ngay trong thời gian nghỉ<br><br>
+                                ✅ Tùy chỉnh thời gian Pomodoro của riêng bạn<br><br>
+                                ✅ Tùy chỉnh âm thanh trong khi tập trung<br><br>
+                                ✅ Video học tập toàn màn hình thư giãn và sống động<br><br>
+                                ✅ Xem lại dữ liệu sử dụng và thêm nhiệm vụ để tăng hiệu suất
+                                <br>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="blog-item">
+                        <div class="blog-item2">
+                            <div class="blog-img">
+                                <img src="img/eat.png" alt="Eat">
+                            </div>
+                            <a class="btn" href="eatclean.html">Thực Đơn Eat Clean<i class="fa fa-angle-right"></i></a>
+                            <p>
+                                <br>
+                                ✅ Một chế độ "Ăn sạch sống khỏe", giúp duy trì vóc dáng cân đối<br><br>
+                                ✅ Thực đơn ngẫu nhiên, gồm nguyên liệu và cách làm chi tiết<br><br>
+                                ✅ Kho thực đơn tổng hợp 20+ món ăn, cập nhật thường xuyên<br><br>
+                                ✅ Loại bỏ thời gian suy nghĩ "Hôm nay ăn gì?"<br><br>
+                                ✅ Đa dạng hóa trải nghiệm nấu nướng trong mùa dịch
+                                <br>
+                            </p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+
+        <!--Music Player Start -->
+        <div id="app-cover" class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.3s">
+            <div id="player">
+                <div id="player-track">
+                    <!-- use Song name for "album-name"-->
+                    <div id="album-name"></div>
+                    <!-- use Artist for "track-name"-->
+                    <div id="track-name"></div>
+                    <div id="track-time">
+                        <div id="current-time"></div>
+                        <div id="track-length"></div>
+                    </div>
+                    <div id="s-area">
+                        <div id="ins-time"></div>
+                        <div id="s-hover"></div>
+                        <div id="seek-bar"></div>
+                    </div>
+                </div>
+                <div id="player-content">
+                    <div id="album-art">
+                        <img src="https://rawcdn.githack.com/serenyvietnam/web-assets/1f59e74ba0c3fb66e7f0591bff1935d075e11073/img/animesky5.jpg" class="active" id="_1">
+                        <img src="https://rawcdn.githack.com/serenyvietnam/web-assets/1f59e74ba0c3fb66e7f0591bff1935d075e11073/img/animesky5.jpg" id="_2">
+                        <img src="https://rawcdn.githack.com/serenyvietnam/web-assets/1f59e74ba0c3fb66e7f0591bff1935d075e11073/img/animesky7.jpg" id="_3">
+                        <img src="https://rawcdn.githack.com/serenyvietnam/web-assets/1f59e74ba0c3fb66e7f0591bff1935d075e11073/img/animesky7.jpg" id="_4">
+                        <img src="https://rawcdn.githack.com/serenyvietnam/web-assets/1f59e74ba0c3fb66e7f0591bff1935d075e11073/img/animesky8.jpg" id="_5">
+                        <div id="buffer-box">Chuyển nhạc...</div>
+                    </div>
+                    <div id="player-controls">
+                        </div>
+                        <div class="control">
+                            <div class="player-button" id="play-previous">
+                                <i class="fas fa-backward"></i>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="player-button" id="play-pause-button">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <div class="player-button" id="play-next">
+                                <i class="fas fa-forward"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+        <script  src="music-player/script.js"></script>
+
+        <!--Music Player End -->
+
+        <!-- Footer Start -->
+        <div class="footer wow fadeIn" data-wow-delay="0.3s">
+            <div class="container-fluid">
+                <div class="container copyright">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="footer-credit">
+                                <div class="credits">
+                                    <p>&copy <a href="#" class="footer-brand">Sereny</a> 2021, All Rights Reserved.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="col-sm-6">
+                            <div class="footer-credit">
+                                <div class="design">
+                                    <p>Designed by <a href="#" class="footer-brand">Sereny</a> with lots of love 💗
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer End -->
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
+

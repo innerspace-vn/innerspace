@@ -1,0 +1,253 @@
+<!doctype html>
+
+<html lang="vi">
+  <head>
+    <meta charset="utf-8">
+    <title>Tính toán giấc ngủ Glory | Sereny</title>
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="bedtime/css/normalize.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="bedtime/css/materialize.min.css"  media="screen,projection"/>
+    <link rel="stylesheet" href="bedtime/css/main.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Importing Font Awesome for social networks icons -->
+    <link rel="stylesheet" href="bedtime/css/font-awesome.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    		<!-- Favicon -->
+		<link href="img/earth.png" rel="icon">
+  </head>
+
+  <body>
+
+		<!-- Return Prev Page -->
+			<a href="evening.html" class="return">
+				<i class="fas fa-arrow-circle-left">
+				</i>
+			</a>
+
+		<style>
+			a {
+			color: #000000!important;
+			}
+
+			.return {
+			padding-left: 15px;
+			font-size: 20px;
+			font-weight: 500px;
+			text-decoration: none;
+      z-index: 100;
+			}
+
+			i:hover {
+			color: rgb(255, 109, 109)!important;
+			}
+		</style>
+
+    <!-- Video Background  -->
+    <div class="fullscreen-bg">
+      <video loop muted autoplay poster="img/blossombg.jpg" class="fullscreen-bg-video">
+        <source src="media/pomovid2.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Form Step 0/3 -->
+
+    <div class="main-container step0">
+      <div class="sleepo-form">
+        <div class="single-column">
+          <h2>Biến mong muốn dậy sớm của bạn thành hiện thực!</h2>
+          <p><span class="bold">Glory</span> là một tính năng tính toán thời gian "hoàng đạo" để đi ngủ và thức dậy, đảm bảo bạn sẽ có một buổi sáng<span class="bold green"> tỉnh táo hoàn toàn!</span></p>
+          <p><span class="bold"></span></p>
+        </div>
+        <!-- <a class="waves-effect waves-teal btn-flat">START</a> -->
+        <button data-nextstep="step1" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">Tui muốn dậy sớm! 💪🏻</button>
+      </div>
+    </div>
+
+    <!-- ********************************************************************* -->
+
+    <!-- Form Step 1/3 -->
+    <div class="main-container step1">
+      <div class="sleepo-form">
+
+        <ul class="steps">
+          <li class="selected"><a class="selected" href="#">1</a></li>
+          <li class="selected"></li>
+          <li><a href="#">2</a></li>
+          <li></li>
+          <li><a href="#">3</a></li>
+        </ul>
+        <h1>Hãy chọn một điều đúng nhất với bạn nhé!</h1>
+        <div class="double-column">
+          <div class="column">
+            <p>Nếu bạn đã biết thời gian bạn đi ngủ, nhưng chưa biết thời gian sẽ thức dậy, hãy nhấn vào đây nha 👇🏻</p>
+            <button data-nextstep="step2a" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">Tính thời gian dậy!</button>
+            <!-- <button data-nextstep="step2a" class="button">NEXT</button> -->
+          </div>
+          <div class="line"></div>
+          <div class="column">
+            <p>Nếu bạn đã biết thời gian bạn thức dậy, nhưng chưa biết thời gian đi ngủ, hãy nhấn vào đây nha 👇🏻</p>
+            <button data-nextstep="step2b" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">Tính thời gian ngủ!</button>
+            <!-- <button data-nextstep="step2b" class="button">NEXT</button> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ********************************************************************* -->
+
+    <!-- Form Step 2a/3 -->
+    <div class="main-container step2a">
+      <div class="sleepo-form">
+
+        <ul class="steps">
+          <li><a href="#">1</a></li>
+          <li class="selected"></li>
+          <li class="selected"><a class="selected" href="#">2</a></li>
+          <li class="selected"></li>
+          <li><a href="#">3</a></li>
+        </ul>
+        <div class="single-column">
+          <h2>Mình sẽ đi ngủ lúc...</h2>
+          <div class="time-section">
+            <div class="input-field">
+             <select class="select-step2a" name="hour">
+               <option value="" disabled selected>(giờ)</option>
+               <option value="1">01</option>
+               <option value="2">02</option>
+               <option value="3">03</option>
+               <option value="4">04</option>
+               <option value="5">05</option>
+               <option value="6">06</option>
+               <option value="7">07</option>
+               <option value="8">08</option>
+               <option value="9">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+             </select>
+            </div>
+           <div class="input-field">
+            <select class="select-step2a" name="minute">
+              <option value="" disabled selected>(phút)</option>
+              <option value="0">00</option>
+              <option value="5">05</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+            </select>
+            </div>
+            <div class="input-field">
+             <select class="select-step2a" name="timelapse">
+               <option value="" disabled selected>(Sáng/Tối)</option>
+               <option value="am">Sáng</option>
+               <option value="pm">Tối</option>
+             </select>
+            </div>
+          </div>
+        </div>
+        <button data-nextstep="step3" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">Tính toán</button>
+      </div>
+    </div>
+
+    <!-- ********************************************************************* -->
+
+    <!-- Form Step 2b/3 -->
+    <div class="main-container step2b">
+      <div class="sleepo-form">
+
+        <ul class="steps">
+          <li><a href="#">1</a></li>
+          <li class="selected"></li>
+          <li class="selected"><a class="selected" href="#">2</a></li>
+          <li class="selected"></li>
+          <li><a href="#">3</a></li>
+        </ul>
+        <div class="single-column">
+          <h2>Mình sẽ thức dậy lúc...</h2>
+          <div class="time-section">
+            <div class="input-field">
+             <select class="select-step2b" name="hour">
+               <option value="" disabled selected>(giờ)</option>
+               <option value="1">01</option>
+               <option value="2">02</option>
+               <option value="3">03</option>
+               <option value="4">04</option>
+               <option value="5">05</option>
+               <option value="6">06</option>
+               <option value="7">07</option>
+               <option value="8">08</option>
+               <option value="9">09</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+             </select>
+            </div>
+           <div class="input-field">
+            <select class="select-step2b" name="minute">
+              <option value="" disabled selected>(phút)</option>
+              <option value="0">00</option>
+              <option value="5">05</option>
+              <option value="10">10</option>
+              <option value="15">15</option>
+              <option value="20">20</option>
+              <option value="25">25</option>
+              <option value="30">30</option>
+              <option value="35">35</option>
+              <option value="40">40</option>
+              <option value="45">45</option>
+              <option value="50">50</option>
+              <option value="55">55</option>
+            </select>
+            </div>
+            <div class="input-field">
+             <select class="select-step2b" name="timelapse">
+               <option value="" disabled selected>(Sáng/Tối)</option>
+               <option value="am">Sáng</option>
+               <option value="pm">Tối</option>
+             </select>
+            </div>
+          </div>
+        </div>
+        <button data-nextstep="step3" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">Tính toán</button>
+      </div>
+    </div>
+
+    <!-- ********************************************************************* -->
+
+    <!-- Form Step 3/3 -->
+    <div class="main-container step3">
+      <div class="sleepo-form">
+        <ul class="steps">
+          <li><a href="#">1</a></li>
+          <li></li>
+          <li><a href="#">2</a></li>
+          <li class="selected"></li>
+          <li class="selected"><a class="selected" href="#">3</a></li>
+        </ul>
+        <div class="single-column">
+          <div class="results">
+            <p><span class="bold red">*Chúng ta thường dành 15 phút để vào giấc ngủ, vậy nên hãy tính toán hợp lý nhé!</span></p>
+          </div>
+        </div>
+        <button data-nextstep="step0" class="button blue accent-3 waves-effect waves-blue waves-light btn-large">Khởi động lại</button>
+      </div>
+    </div>
+
+  </body>
+  <script type="text/javascript" src="bedtime/js/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="bedtime/js/materialize.min.js"></script>
+  <script type="text/javascript" src="bedtime/js/moment.min.js"></script>
+  <script type="text/javascript" src="bedtime/js/main.js"></script>
+  </script>
+</html>

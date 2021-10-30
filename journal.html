@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Spark - Nhật kí hội họa | Sereny</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;300;400;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+
+		<!-- Favicon -->
+		<link href="img/earth.png" rel="icon">
+	</head>
+
+	<body>
+
+		<!-- Return Prev Page -->
+		<div class="return">
+			<a href="morning.html">
+				<i class="fas fa-arrow-circle-left">
+				</i>
+			</a>
+		</div>	
+		<style>
+			a {
+			color: #000000!important;
+			}
+
+			.return {
+			padding-left: 15px;
+			font-size: 20px;
+			font-weight: 500px;
+			text-decoration: none;
+			font-family: 'Patrick Hand', sans-serif;
+
+			}
+
+			i:hover {
+			color: rgb(255, 109, 109);
+			}
+		</style>
+
+			<!-- Art Journal -->
+		<div class='all'>
+			<h1> ~ Spark ~ </h1>
+			<div class='main'>
+				<h2 class='medPink'>Nhật kí hội họa của riêng bạn 🔐</h2>
+				<p>Chào mừng bạn ghé chơi với Spark, một người bạn giúp bạn <a href="https://www.wikihow.vn/Gi%E1%BA%A3i-t%E1%BB%8Fa-Stress"><span>giải tỏa căng thẳng</span></a>.</p>
+				<ul>
+					<li>Vẽ <b>ngay trên trình duyệt của bạn</b></li>
+					<li><b>Khuyến khích phương pháp chữa lành</b> bằng việc viết và vẽ lại những cảm xúc của bạn</li>
+					<li>Viết theo những <b>chủ đề có sẵn, cập nhật thường xuyên, được tỉ mỉ chọn lựa </b> bởi Sereny Team với sự tham khảo các trang web Sức khỏe Tâm lý nổi tiếng thế giới</li>
+					<li>Lưu những tâm sự thầm kín <b>ngay trên thiết bị của bạn</b></li>
+				</ul>
+			</div>
+
+			<!-- Buttons -->
+
+			<div style='position:relative; width:100%; display:flex; justify-content:center; margin-top:20px;'>
+				<button class="button" id="start" onclick="window.location='canvas.html'">
+					Khám phá</button>
+			</div>
+		</div>	
+
+		<style>
+			body {
+				background-color: #f7cac9;
+				color: #fff;
+				font-family: 'Patrick Hand', sans-serif;
+				margin: 0px;
+				padding: 0px;
+				color: #767676;
+				letter-spacing: 1px;
+				line-height: 2em;
+			}
+
+			h1 {
+				text-align: center;
+				color: rgb(255, 109, 109);
+				font-size: 50px;
+
+			}
+
+			.all {
+				position: absolute;
+				top: 30%;
+				left: 50%;
+				transform: translate(-50%, -30%);
+				width: 80%;
+				max-width: 888px;
+			}
+/**	
+			.button {
+				font-family: inherit;
+				display: inline;
+				padding: 5px 12px;
+				cursor: pointer;
+				text-align: center;
+				text-decoration: none;
+				outline: none;
+				color: grey;
+				background-color: white;
+				border: none;
+				border-radius: 15px;
+				box-shadow: 0 3px #999;
+			}
+
+			.button:hover {
+				background-color: #f0ebee;
+			}
+
+		.button:active {
+				background-color: #c8c8c8;
+				box-shadow: 0 5px #666;
+				transform: translateY(3px);
+			}
+**/
+			.button {
+				padding: 6px 20px;
+				font-size: 14px;
+				font-weight: 600;
+				letter-spacing: 1px;
+				color: #F7CAC9;
+				background: #343148;
+				border-radius: 0;
+				transition: .3s;
+				font-family: inherit;
+				display: inline;
+				text-align: center;
+				text-decoration: none;
+				outline: none;
+			}
+
+
+			.button:hover {
+				color: #343148;
+				background: #ffffff;
+			}
+
+			.main {
+				position: relative;
+				padding: 10px 20px;
+				border-radius: 16px;
+				background-color: #fff;
+				margin: 0 auto;
+			}
+
+			p {
+				width: 100%;
+				font-size: 25px;
+			}
+
+			b {
+				color: rgb(255, 137, 137);
+				font-weight: normal;
+			}
+
+			a {
+				text-decoration: none;
+				color: #52b4ff;
+			}
+			
+			a:hover {
+				color: #0091ff;
+			}
+
+			.back {
+				padding-left: 15px;
+				padding-top: 10px;
+				font-size: 20px;
+				color:#0091ff;
+				font-weight: 500px;
+			}
+
+			.back:hover {
+				color: #00467c;
+			}
+
+			ul {
+				list-style: "🌻 ";
+				font-size: 25px;
+			}
+
+
+			.white {
+				color: #fff;
+				font-weight: bold;
+			}
+
+			.medPink {
+				color: rgb(255, 123, 123);
+				font-size: 40px;
+			}
+
+			footer {
+				font-size: 0.8em;
+				position: absolute;
+				bottom: 0px;
+				left: 50%;
+				transform: translate(-50%, 0%);
+				width: 80%;
+				max-width: 700px;
+				text-align: right;
+			}
+
+
+		</style>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+
+	</body>
+</html>
