@@ -41,8 +41,12 @@ body {
 }
 
 #timeLeft {
+	font-size: 180px!important;
+	background-image: url(https://m.media-amazon.com/images/I/4120a22ERVS._AC_SL1002_.jpg);
+	background-repeat: repeat;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	font-weight: bold;
-	font-size: 5rem;
 }
 
 .alert {

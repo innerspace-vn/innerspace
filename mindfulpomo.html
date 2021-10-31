@@ -16,6 +16,10 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Quicksand:wght@500&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
         <!-- CSS Libraries -->
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -109,7 +113,7 @@
 				}
 
 				i:hover {
-				color: rgb(255, 109, 109);
+				color: #065866;
 				}
 			</style>
 
@@ -172,26 +176,26 @@
 				<div class="row">
 					<!-- Time Left and Progress Bar -->
 					<div class="col-12 pt-0 d-flex justify-content-center">
-
-							<div class="overlay">
-								<h1 id="timeLeft"></h1>
+						<div class="overlay">
+							<div class="timearea">
+								<p id="timeLeft"></p>
 							</div>
-
+						</div>
 					</div>
 
 <style>
-	h1{
-		color: #ffffff;
-		font-family: 'Varela Round';
-		padding-left: 20px;
-		padding-right: 20px;
+
+	.overlay .timearea {
+		font-family: 'Varela Round', Arial, Helvetica, sans-serif;
+		padding-left: 10px;
+		padding-right: 10px;
 		border-radius: 20px;
-		margin-top: 30%;
-		margin-bottom: 30%;
-		background-color: rgba(0, 0, 0, 0.3);
+		margin-top: 10%;
+		margin-bottom: 10%;
 		position: inherit;
-		font-size: 120px!important;
+		background-color: rgba(0, 0, 0, 0.35);
 	}
+
 </style>
 
 					<!-- Start, Stop, Reset Buttons -->

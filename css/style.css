@@ -218,7 +218,6 @@ nav select { display: inline-block; }
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
 }
 
 .navbar.nav-sticky .navbar-brand span {
