@@ -81,11 +81,10 @@
 }
 
 form.convFormDynamic {
-    width: calc(100% - 33px);
-    margin: 10px auto 15px;
     padding: 0 !important;
     position: relative;
-    box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.4);
+    box-shadow: 0 0 5px 5px rgba(222, 222, 222, 0.68);
+    border-radius: 20px;
 }
 
 form.convFormDynamic textarea.userInputDynamic {
@@ -99,8 +98,7 @@ form.convFormDynamic textarea.userInputDynamic {
     min-height: 1.7em;
     max-height: 10rem;
     display: block;
-    max-width: 88%;
-    margin-right: 2.5%;
+    max-width: 95%;
 }
 
 
@@ -160,7 +158,7 @@ div.conv-form-wrapper:before {
     top: 0;
     left: 0;
     z-index: 2;
-    background: linear-gradient(#fff, transparent);
+    background: transparent;
 }
 @media (max-width: 767px) {
     div.conv-form-wrapper div.wrapper-messages, div.conv-form-wrapper div#messages {
@@ -188,8 +186,10 @@ textarea.userInputDynamic.error {
 }
 
 textarea.userInputDynamic {
-    border-radius: 3px;
-    margin: 7px 10px;
+    border-radius: 20px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    margin-left: 10px;
 }
 
 div.conv-form-wrapper div#messages {
@@ -217,11 +217,11 @@ div.conv-form-wrapper div.options:after {
 }
 div.conv-form-wrapper div.options div.option {
     padding: 7px 12px;
-    border: 1px solid rgba(6,153,184,0.3);
+    border: 1px solid rgba(255, 255, 255, 0.754);
     display: inline-block;
     margin: 5px;
-    background: #fff;
-    color: #06c5a6;
+    background: rgba(107, 94, 199, 0.85);
+    color: #ffffff;
     cursor: pointer;
     border-radius: 20px;
     font-size: 0.9rem;
@@ -235,7 +235,14 @@ div.conv-form-wrapper div.message:after {
     clear: both;
 }
 div.conv-form-wrapper  div.message.ready {
-    animation: bounceIn 0.2s ease;
+    animation-duration: 0.3s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    animation-name: bounceIn;
     transform-origin: 0 0 0;
 }
 div.conv-form-wrapper  div#messages div.message {
@@ -253,15 +260,13 @@ div.conv-form-wrapper  div#messages div.message {
     word-wrap: break-word;
 }
 div.conv-form-wrapper  div#messages div.message.to {
-    background: #efefef;
-    color: #6f6f6f;
+    background: rgba(255, 255, 255, 0.85);
+    color: #000000;
     float: left;
-    border-top-left-radius: 0;
 }
 div.conv-form-wrapper div#messages div.message.from {
-    background: #06b79a;
-    color: #fff;
-    border-top-right-radius: 0;
+    background: rgba(78, 63, 190, 0.85);
+    color: rgb(255, 255, 255);
 }
 .message.to+.message.from, .message.from+.message.to {
     margin-top: 15px;
@@ -284,40 +289,44 @@ div.conv-form-wrapper div#messages div.message.from {
     }
 }
 div.conv-form-wrapper div.options div.option:hover {
-    background: #eeeeee;
+    background: rgba(198, 192, 255, 0.85);
+    color: rgb(36, 36, 36);
 }
 div.conv-form-wrapper div.options div.option.selected {
-    background: #06b79a;
-    color: #fff;
+    background: #fc6a65;
+    color: rgb(0, 0, 0);
 }
 div.conv-form-wrapper div.options div.option.selected:hover {
-    background: #069c7f;
+    background: #ffcbc9;
 }
 
 form.convFormDynamic button.submit {
-    padding: 3px;
+    padding-left: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-right: 6px;
     border: none;
-    float: left;
+    float: right;
     margin: 5px;
-    color: #06c5a6;
+    color: #fd8e8a;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: 20px;
     font-size: 1.1rem;
     width: 36px;
     height: 35px;
-    margin-top: 4px;
-    background: #fff;
+    margin-top: 6px;
+    background: rgb(255, 216, 216);
     outline: none !important;
 }
 
 
 form.convFormDynamic button.submit:hover {
-    background: #06b79a;
+    background: #fd8e8a;
     color: #fff;
 }
 
 button.submit.glow {
-    box-shadow: 0 0 10px 5px rgba(6, 197, 166, 0.4);
+    box-shadow: 0 0 10px 5px #fdbbb9c9;
 }
 .no-border {
     border: none !important;
@@ -328,7 +337,7 @@ button.submit.glow {
 div.conv-form-wrapper div#messages::-webkit-scrollbar, div#feed ul::-webkit-scrollbar {
     width: 0px;
     /* remove scrollbar space */
-    background: transparent;
+    background-color: #000000;
     /* optional: just make scrollbar invisible */
 }
 span.clear {
@@ -339,14 +348,14 @@ span.clear {
 .spinLoader,
 .spinLoader:before,
 .spinLoader:after {
-    background: #06c5a6 !important;
+    background: #fd8e8a !important;
     -webkit-animation: spinLoaderChat 1s infinite ease-in-out;
     animation: spinLoaderChat 1s infinite ease-in-out;
     width: 1em;
     height: 4em;
 }
 .spinLoader {
-    color: #06c5a6 !important;
+    color: #fd8e8a !important;
     text-indent: -9999em;
     margin: 50% auto;
     position: relative;
@@ -394,4 +403,10 @@ span.clear {
         box-shadow: 0 -2em;
         height: 5em;
     }
+}
+
+
+.footer {
+    position: fixed!important;
+
 }

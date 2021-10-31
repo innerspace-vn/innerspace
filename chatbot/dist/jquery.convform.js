@@ -259,12 +259,12 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
         $(this).addClass('conv-form-wrapper');
 
         var parameters = $.extend(true, {}, {
-            placeHolder : 'Type Here',
+            placeHolder : 'Nhập câu trả lời',
             typeInputUi : 'textarea',
             timeOutFirstQuestion : 1200,
             buttonClassStyle : 'icon2-arrow',
             selectInputStyle: 'show',
-            selectInputDisabledText: 'Select an option',
+            selectInputDisabledText: 'Hãy đưa ra lựa chọn',
             eventList : {
                 onSubmitForm : function(convState) {
                     console.log('completed');
@@ -286,7 +286,7 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
             formIdName : 'convForm',
             inputIdName : 'userInput',
             loadSpinnerVisible : '',
-            buttonText: '▶'
+            buttonText: '🚀'
         }, options);
 
         /*
@@ -530,4 +530,30 @@ ConvState.prototype.answerWith = function(answerText, answerObject) {
             return false;
         }
     }
+
+
+
+    const userAnswer = document.getElementsByName("survey1-q")
+    let ansPoint = 0;
+
+for (i in userAnswer) { 
+    if (userAnswer === "Không bao giờ"){
+        ansPoint = ansPoint + 0
+    } else if (userAnswer === "Hiếm khi"){
+        ansPoint = ansPoint + 1
+    } else if (userAnswer === "Đôi khi"){
+        ansPoint = ansPoint + 2
+    } else if (userAnswer === "Thường xuyên"){
+        ansPoint = ansPoint + 3
+    } else if (userAnswer === "Rất thường xuyên"){
+        ansPoint = ansPoint + 4
+    }
+}
+
+    document.getElementById("results").innerHTML = ansPoint;
+
+//img container//
+
+
+
 })( jQuery );
