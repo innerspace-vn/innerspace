@@ -143,7 +143,7 @@ allBackgroundMusic = {
 		loop: true,
 	}),
 	"Thiền Chánh niệm": new Howl({
-		src: ["pomo/assets/sounds/background_music/rungmuanhietdoi.mp3"],
+		src: ["https://rawcdn.githack.com/serenyvietnam/sereny/57687799c4259436525cc3535154f189b47d357e/pomo/assets/sounds/background_music/mindfulness45p.mp3"],
 		volume: 1,
 		loop: true,
 	}),
