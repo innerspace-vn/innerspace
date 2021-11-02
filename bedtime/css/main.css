@@ -59,7 +59,7 @@ VIDEO BACKGROUND
 }
 
 /*------------------------------------------------
-SLEEPO FORM
+glory FORM
 ------------------------------------------------*/
 body {
   margin: 0;
@@ -112,9 +112,9 @@ body {
   align-items: center;
 }
 
-/*Sleepo Form*/
+/*glory Form*/
 
-.sleepo-form {
+.glory-form {
   background-color: #ffffffc2;
   display: flex;
   flex-direction: column;
@@ -461,7 +461,7 @@ MEDIA QUERIES
     margin: 0.5em 0;
   }
 
-  .sleepo-form {
+  .glory-form {
     margin:inherit;
     max-width: 700px;
     height: 600px;

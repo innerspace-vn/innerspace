@@ -76,9 +76,9 @@ $(document).ready(function(){
   $("button").click(function(){
     // Allow to navigate to other steps
     nextStep = $(this).data('nextstep');
-    // If the button is restar, sleepo have to be resetted
+    // If the button is restarted, glory have to be resetted
     if(nextStep==="step0")
-      location.href = "index.html";
+      location.href = "bedtime.html";
 
     //Move forward on those steps which dont require
     //any special calculation (step0 step1)
