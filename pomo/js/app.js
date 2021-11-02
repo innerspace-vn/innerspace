@@ -142,6 +142,11 @@ allBackgroundMusic = {
 		volume: 1,
 		loop: true,
 	}),
+	"Thiền Chánh niệm": new Howl({
+		src: ["pomo/assets/sounds/background_music/rungmuanhietdoi.mp3"],
+		volume: 1,
+		loop: true,
+	}),
 };
 
 init();
