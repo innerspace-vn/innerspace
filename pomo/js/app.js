@@ -147,6 +147,11 @@ allBackgroundMusic = {
 		volume: 1,
 		loop: true,
 	}),
+	"Thiền Chánh niệm x Âm thanh thiên nhiên": new Howl({
+		src: ["https://rawcdn.githack.com/serenyvietnam/sereny/e364bdabafb166811e56b4c574c16e3c27a52497/pomo/assets/sounds/background_music/mindfulness10pdailycalm.mp3"],
+		volume: 1,
+		loop: true,
+	}),
 };
 
 init();
