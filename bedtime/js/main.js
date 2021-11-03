@@ -69,7 +69,7 @@ $(document).ready(function(){
   }
 
   function step3Calc(aMessage,aNormalTime,aGoodTime,aBetterTime,aBestTime){
-    resultString = aMessage.concat("<div class='collection'><a href='' class='collection-item'><span class='new badge green darken-1' data-badge-caption='BEST'></span>"+bestTime+"</a> <a href='' class='collection-item'><span class='new badge light-green darken-1' data-badge-caption='BETTER'></span>"+betterTime+"</a> <a href='' class='collection-item'><span class='new badge lime darken-1' data-badge-caption='GOOD'></span>"+goodTime+"</a> <a href='' class='collection-item'><span class='new badge deep-orange darken-1' data-badge-caption='NORMAL'></span>"+normalTime+"</a> </div>");
+    resultString = aMessage.concat("<div class='collection'><a href='' class='collection-item'><span class='new badge green darken-1' data-badge-caption='Tốt nhất'></span>"+bestTime+"</a> <a href='' class='collection-item'><span class='new badge light-green darken-1' data-badge-caption='Tốt'></span>"+betterTime+"</a> <a href='' class='collection-item'><span class='new badge lime darken-1' data-badge-caption='Khá'></span>"+goodTime+"</a> <a href='' class='collection-item'><span class='new badge deep-orange darken-1' data-badge-caption='Tạm ổn'></span>"+normalTime+"</a> </div>");
     $(".results").prepend(resultString);
   }
 
