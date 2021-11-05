@@ -1,14 +1,30 @@
-### Hi there 👋
+### Sereny xin chào bạn! 👋
+📌 Bạn có phải một người thường xuyên dành thời gian "khám phá thế giới bên ngoài" qua mạng xã hội thay vì khám phá thế giới thực bên trong chính bản thân mình?
 
-Sereny được sáng lập với sứ mệnh sẽ trở thành một người bạn tri kỉ của bạn và giúp bạn cải thiện sức khỏe thể chất, tinh thần với những hoạt động bổ ích và thú vị. ✨
+📌 Bạn có phải một người dành ít sự quan tâm đến sức khỏe tinh thần của mình?
 
-Các hoạt động của Sereny được chia thành 5 nhóm khác nhau:
-* Bình Minh: Nhóm hoạt động khuyến khích thực hiện trong buổi sáng. Các bạn có thể sử dụng chức năng "Gợi ý Thực đơn Eat Clean" với công thức và hướng dẫn cụ thể để nấu cho bản thân một món ăn Eat Clean "rất ngon mà không sợ ...tăng kí". Bên cạnh đó, đừng quên dành 10-15p mỗi buổi sáng để tập Thiền Chánh niệm (Mindfulness) bạn nhé. Các nội dung tập luyện sẽ được chúng mình cập nhật theo từng ngày, hứa hẹn sẽ đem đến trải nghiệm mới mẻ giúp các bạn trong mùa dịch này.
+Vậy thì còn chần chừ gì nữa, hãy trải nghiệm Sereny để "cập nhật" lên phiên bản khỏe mạnh hơn và hạnh phúc hơn cho bản thân mỗi ngày nhé 🥰
 
-* Hoàng Hôn: Nhóm hoạt động khuyến khích thực hiện trong buổi sáng. Hiện tại, Sereny đang triển khai Thứ thách 30 ngày Yoga với mục tiêu giúp được thật nhiều các bạn trẻ, đặc biệt là thế hệ Gen Z có một "cột sống" khỏe mạnh hơn. Đặc biệt, chúng mình sẽ cố gắng trong thời gian tới cập nhật thêm các hoạt động nhằm đạt được mục tiêu trở thành người bạn tri kỉ số 1 về sức khỏe thể chất và tinh thần của bạn.
+Về chúng tớ:
 
-* Đêm Tối:
+Sereny được sáng lập với sứ mệnh sẽ trở thành một người bạn tri kỉ luôn đồng hành cùng bạn trên con đường cải thiện sức khỏe tinh thần qua những hoạt động bổ ích và thú vị. ✨
 
-* Tháng Học Tập: Nơi chúng mình sẽ cùng nhau trau dồi kiến thức chung và chia sẻ các mẹo cuộc sống trong chuyên mục Zoom-Out, cũng như đào sâu kiến thức và tiếp thu những thông tin chuyên sâu đa lĩnh vực trong chuyên mục Zoom-In. Với 2 chuyên mục vừa để lĩnh hội được kiến thức tổng hợp, lại vừa thu nạp kiến thức chuyên môn, Sereny tin rằng khi nhìn lại quãng thời gian một tháng, mỗi ngày đều dành 5 phút ở Tháng Học tập sẽ giúp bạn trở thành một "anh chàng/cô nàng Google" chính hiệu!
+Các tính năng của Sereny:
 
-* Sự Kiện Đặc Biệt:
+Nhằm giải quyết những vấn đề về sức khỏe tinh thần, Sereny đã tạo ra các tính năng dựa trên những vấn đề về sức khỏe trong đại dịch đã được công bố như:
+
+1. Rối loạn ăn uống (Eating Disorder)
+2. Mất ngủ (Insomnia)
+3. Lo lắng, sợ hãi, chán nản (Anxiety)
+4. Mất tập trung (Inattention)
+
+Tương ứng với mỗi vấn đề, Sereny đề xuất những tính năng có thể giúp cải thiện sức khỏe tinh thần của bạn:
+
+Vấn đề 1: Tính năng Gợi ý Thực đơn Eat Clean
+Vấn đề 2: Tính năng Tính toán Giấc Ngủ
+Vấn đề 3: Tính năng Chat cùng Nhím, Tâm sự cùng Sereny Team, Nhật kí Hội họa 
+Vấn đề 4: Tính năng Mindful Pomo
+
+Trong thời gian tới, Sereny Team sẽ liên tục hoàn thiện những tính năng cũ và cập nhật những tính năng mới để giúp nâng cao sức khỏe tinh thần của các bạn!
+
+Lời cuối, Sereny chúc bạn luôn mạnh khỏe, hạnh phúc và an toàn trong thời kì dịch bệnh hiện tại! 
