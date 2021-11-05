@@ -9,9 +9,7 @@ Về chúng tớ:
 
 Sereny được sáng lập với sứ mệnh sẽ trở thành một người bạn tri kỉ luôn đồng hành cùng bạn trên con đường cải thiện sức khỏe tinh thần qua những hoạt động bổ ích và thú vị. ✨
 
-Các tính năng của Sereny:
-
-Nhằm giải quyết những vấn đề về sức khỏe tinh thần, Sereny đã tạo ra các tính năng dựa trên những vấn đề về sức khỏe trong đại dịch đã được công bố như:
+Nhằm giải quyết những vấn đề về sức khỏe tinh thần, Sereny đã tham khảo những vấn đề nghiêm trọng về sức khỏe trong đại dịch đã được báo chí công bố như:
 
 1. Rối loạn ăn uống (Eating Disorder)
 2. Mất ngủ (Insomnia)
