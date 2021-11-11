@@ -18,10 +18,10 @@ Nhằm giải quyết những vấn đề về sức khỏe tinh thần, Sereny 
 
 Tương ứng với mỗi vấn đề, Sereny đề xuất những tính năng có thể giúp cải thiện sức khỏe tinh thần của bạn:
 
-Vấn đề 1: Tính năng Gợi ý Thực đơn Eat Clean
-Vấn đề 2: Tính năng Tính toán Giấc Ngủ
-Vấn đề 3: Tính năng Chat cùng Nhím, Tâm sự cùng Sereny Team, Nhật kí Hội họa 
-Vấn đề 4: Tính năng Mindful Pomo
+1. Vấn đề 1: Tính năng Gợi ý Thực đơn Eat Clean
+2. Vấn đề 2: Tính năng Tính toán Giấc Ngủ
+3. Vấn đề 3: Tính năng Chat cùng Nhím, Tâm sự cùng Sereny Team, Nhật kí Hội họa 
+4. Vấn đề 4: Tính năng Mindful Pomo
 
 Trong thời gian tới, Sereny Team sẽ liên tục hoàn thiện những tính năng cũ và cập nhật những tính năng mới để giúp nâng cao sức khỏe tinh thần của các bạn!
 
