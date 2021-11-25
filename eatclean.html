@@ -28,61 +28,49 @@
     
     <body>
 
-        <!-- Nav Bar Start -->
-        <div class="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div class="container-fluid">
-                <a href="index.html" class="navbar-brand">Sereny</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon">
-                    </span>
-                </button>
+	<!-- return prev page -->
+	<a href="afternoon.html" class="return">
+		<i class="fas fa-arrow-circle-left">
+		</i>
+	</a>
+	<style>
+		a {
+		color: #000000!important;
+		}
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav ml-auto">
-                        <a href="index.html" class="nav-item nav-link">Trang Chủ</a>
-                        <a href="about.html" class="nav-item nav-link">Giới Thiệu</a>
-                        <a href="morning.html" class="nav-item nav-link active">Bình Minh</a>
-                        <a href="afternoon.html" class="nav-item nav-link">Hoàng Hôn</a>
-                        <a href="evening.html" class="nav-item nav-link">Đêm Tối</a>
-                        
+		.return {
+		padding-left: 15px;
+		font-size: 20px;
+		font-weight: 500px;
+		text-decoration: none;
+		font-family: 'Patrick Hand', sans-serif;
+		}
+
+		i:hover {
+		color: #8168ee;
+		}
+
+	</style>
+
+    <style>
+        body {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        }
+    </style> 
+
+    <!-- Random Picture Generator Start -->
+                <div class ="randeatclean wow fadeInUp" data-wow-delay="0.5s">  
+                    <div class = "randbtn">
+                        <button onclick="displayRandomImages();" class="btn">Úm ba la xì bùa một Thực đơn Eat Clean hiện ra ✨</button>  
                     </div>
-                </div>
-            </div>
-        </div>
-        <!-- Nav Bar End -->
-
-        <style>
-            body {
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-            }
-        </style> 
-
-
-        <!-- Page Header Start -->
-        <div class="page-header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 wow fadeInDown" data-wow-delay="0.1s">
-                        <h2>Gợi ý Thực đơn Eat Clean</h2>
+                        <div class="randtxt">
+                            <h6>(Hãy nhấn nút để lựa chọn ngẫu nhiên một thực đơn!)</h6>
+                        </div>
                     </div>
-                </div>
             </div>
-        </div>
-        <!-- Page Header End -->
-
-        <!-- Random Picture Generator Start -->
-                    <div class ="randeatclean wow fadeInUp" data-wow-delay="0.5s">  
-                        <div class = "randbtn">
-                            <button onclick="displayRandomImages();" class="btn">Úm ba la xì bùa một Thực đơn Eat Clean hiện ra ✨</button>  
-                        </div>
-                            <div class="randtxt">
-                                <h6>(Hãy nhấn nút để lựa chọn ngẫu nhiên một thực đơn!)</h6>
-                            </div>
-                        </div>
-                </div>
-        <!-- Random Picture Generator End -->
+    <!-- Random Picture Generator End -->
 
 
         <!-- JavaScript Libraries -->
